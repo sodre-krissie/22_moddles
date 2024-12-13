@@ -1,0 +1,278 @@
+<style>
+   /* Ícones */
+   .ff_icon .ph-fill {
+      font-size: 54px;
+      color: #FFF;
+   }
+
+   .header_user_notif i.ph {
+      font-size: 20px;
+      position: relative;
+      top: 12%;
+      color: #FFF !important;
+   }
+
+   /* Icone de Idioma */
+   li.user_setting.ccn-settings-nav.ccn-lang-menu {
+      display: none;
+   }
+
+   /* Cabeçalho */
+   .navbar_brand span {
+      display: none;
+   }
+
+   /* Social */
+   a.btn.dbxshad.btn-md.btn-thm3.rounded.btn-block,
+   a.btn.dbxshad.btn-md.btn-thm3.rounded.btn-block:hover {
+      border: 1px solid #7A0C00;
+   }
+
+   .lazy-load-list.collapse.show {
+      max-height: 42vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+   }
+
+   .list-group {
+      overflow-y: auto;
+      margin-bottom: 36px;
+      overflow-x: hidden;
+   }
+
+   .footer-container {
+      bottom: 16px !important;
+   }
+
+   textarea.form-control {
+      min-height: 100px;
+      width: calc(100% - 70px) !important;
+      padding: 16px !important;
+   }
+
+   .message_input button.btn {
+      width: 60px !important;
+   }
+
+   /* Cursos */
+   .my_course_content {
+      background-color: transparent;
+      box-shadow: none;
+   }
+
+   .courses_list_heading,
+   .my_course_content_header {
+      border-bottom: none;
+   }
+
+   /* Card de Curso */
+   .my_course_content_list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 0 24px;
+   }
+
+   .mc_content_list {
+      border-bottom: none !important;
+      display: flex;
+      flex-direction: column;
+      background-color: #fefefe;
+      border-radius: 8px;
+      position: relative !important;
+      width: calc(33% - 16px);
+      min-width: 300px;
+   }
+
+   .mc_content_list .thumb {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      max-width: 100% !important;
+      object-fit: cover;
+   }
+
+   .mc_content_list .thumb img.img-whp {
+      border-radius: 8px 8px 0 0 !important;
+   }
+
+   .mc_content_list .details {
+      position: relative;
+      margin-top: 170px;
+   }
+
+   .my_course_content .ccn-pagination {
+      border-top: none;
+   }
+
+   .ccn_mc_content_header_actions {
+      position: absolute;
+      top: -10px;
+      right: 0;
+   }
+
+   /* Thumb do card */
+   .my_course_content_list .mc_content_list .thumb .overlay {
+      background-color: rgba(0, 0, 0, .7);
+   }
+
+   .my_course_content_list .mc_content_list .thumb .overlay ul {
+      margin-top: 0;
+      position: relative;
+      top: 0;
+      height: 100%;
+   }
+
+   .my_course_content_list .mc_content_list .thumb .overlay ul li {
+      border-radius: 0;
+      border-style: none;
+      border-width: 0;
+      border-color: transparent;
+      background-color: transparent;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+   }
+
+   a.mcc_view {
+      font-size: 20px !important;
+      position: relative;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+   }
+
+   /* Rodapé */
+   .footer_one,
+   .logo-widget span {
+      display: none;
+   }
+
+   .footer_social_widget a {
+      color: #7A0C00 !important;
+   }
+
+   .ccn_footer_style_7 .footer_middle_area,
+   .ccn_footer_style_7 .footer_one {
+      background-color: #fefefe;
+      border-top: 1px solid #7A0C00;
+   }
+
+   .ccn_footer_style_7 .footer_bottom_area {
+      background-color: #fefefe;
+   }
+
+   /* Ocultar o página HOme */
+   li[data-key="home"],
+   li[data-key="competencies"] {
+      display: none;
+   }
+
+   /* Grade de notas para aluno */
+   .user-grade tr th {
+      color: black;
+      background: white !important;
+   }
+
+   td#cat_2275_2 {
+      display: none;
+   }
+
+   /* Barra Lateral */
+   .dashbord_nav_list li {
+      height: auto;
+   }
+
+   .dashboard_sidebars h4 {
+      display: none;
+   }
+
+   /* Calendário */
+   #page-calendar-view .ccn-sidebar-region {
+      display: none;
+   }
+
+   /* Chat */
+   .inbox_chatting_box .chatting_content li.media .media-body {
+      background-color: #e4d0cd;
+      color: black;
+      max-width: 300px;
+   }
+
+   .inbox_chatting_box .chatting_content li.media.reply .media-body {
+      border-radius: 5px;
+      background-color: #e1e6ef;
+      color: black;
+      max-width: 320px;
+      padding: 10px 15px;
+   }
+
+   .activityiconcontainer.content .activityicon:not(.nofilter),
+   .activityiconcontainer.content .icon:not(.nofilter),
+   .activityiconcontainer.assessment .activityicon:not(.nofilter),
+   .activityiconcontainer.assessment .icon:not(.nofilter) {
+      filter: none;
+      height: 50px;
+      width: 50px;
+      max-width: none;
+   }
+
+   .activityiconcontainer.content,
+   .activityiconcontainer.assessment {
+      background-color: transparent;
+   }
+
+   #page-course-view-topics .breadcrumb_content {
+      display: none;
+   }
+
+   #page-course-view-topics .inner_page_breadcrumb {
+      background-size: cover;
+      height: 80px;
+      padding: 0;
+   }
+
+   div#page-heading-button {
+      padding: 0;
+   }
+
+
+   @media(max-width: 700px) {
+      .d-flex {
+         display: flex !important;
+         flex-direction: column;
+         width: 100%;
+         gap: 8px;
+      }
+
+      .d-flex .mr-2.flex-grow-1,
+      .d-flex .dropdown.mr-1,
+      .d-flex .dropdown,
+      .d-flex button {
+         width: 100%;
+      }
+
+      .inner_page_breadcrumb.ccn_breadcrumb_s .breadcrumb_content {
+         padding-top: 25%;
+      }
+
+      object#resourceobject {
+         max-width: calc(100vw - 36px);
+      }
+
+      .my_course_content_list .mc_content_list {
+         display: flex;
+         width: 100%;
+      }
+
+   }
+</style>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@6.0.1/css/emojione.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/index.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji" rel="stylesheet">

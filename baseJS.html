@@ -1,0 +1,123 @@
+<div vw class="enabled">
+   <div vw-access-button class="active"></div>
+   <div vw-plugin-wrapper>
+       <div class="vw-plugin-top-wrapper"></div>
+   </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+   new window.VLibras.Widget ( 'https://vlibras.gov.br/app' );
+</script>
+<script>
+   $(document).ready(function(){
+       //$(".activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//trilha.png");
+       $(".activity.quiz .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//questionario.png");
+       $(".activity.url .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//linkexterno.png");
+       $(".activity.scorm .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//trilha.png");
+       $(".activity.lti .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//lti.png");
+       $(".activity.bigbluebuttonbn .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//bbb.png");
+       //$(".activity.wiki .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//audio.png");
+       //$(".activity.assign .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//audio.png");
+   });
+</script>
+
+<script>
+document.querySelectorAll('.ff_icon').forEach(icon => {
+   const spanElement = icon.querySelector('span');
+
+   // Mapeamento de substituições: classes de <span> para classes de <i>
+   const replacementMap = {
+       'fa fa-book': 'ph-fill ph-book-open-text',
+       'flaticon-speech-bubble': 'ph-fill ph-book-open-text',
+'flaticon-cap': 'ph-fill ph-books',
+       'ccn-flaticon-bookmark-1': 'ph-fill ph-books',
+'flaticon-settings': 'ph-fill ph-calendar-blank',
+       'flaticon-rating': 'ph-fill ph-exam',
+   };
+
+   if (spanElement) {
+       const spanClassList = Array.from(spanElement.classList).join(' ');
+
+       // Verifica se as classes do <span> estão no mapeamento
+       if (replacementMap[spanClassList]) {
+           const newIcon = document.createElement('i');
+           newIcon.className = replacementMap[spanClassList];
+
+           // Substitui o <span> pelo novo <i> com as classes correspondentes
+           icon.replaceChild(newIcon, spanElement);
+       }
+   }
+});
+
+</script>
+<script>
+function updateHeaderIcons() {
+   const notifList = document.querySelector('.header_user_notif.ccn-frontend-header_user_notif.pull-right.dn-smd');
+
+   if (notifList) {
+       notifList.querySelectorAll('span, i').forEach(icon => {
+           // Mapeamento de substituições: classes do elemento atual para as classes do novo <i>
+           const replacementMap = {
+               'ccn-flaticon-hide': 'ph ph-moon',
+               'flaticon-alarm': 'ph ph-bell-simple',
+               'flaticon-speech-bubble': 'ph ph-chats-circle',
+               'flaticon-settings': 'ph ph-gear'
+           };
+
+           const iconClassList = Array.from(icon.classList).join(' ');
+
+           // Verifica se as classes do elemento estão no mapeamento
+           for (const [oldClasses, newClasses] of Object.entries(replacementMap)) {
+               if (iconClassList.includes(oldClasses)) {
+                   const newIcon = document.createElement('i');
+                   newIcon.className = newClasses;
+                   
+                   // Preserva o título, o papel e a descrição se o elemento original for um <i>
+                   if (icon.tagName === 'I') {
+                       newIcon.title = icon.title;
+                       newIcon.role = icon.role;
+                       newIcon.setAttribute('aria-label', icon.getAttribute('aria-label'));
+                   }
+                   
+                   // Substitui o elemento pelo novo <i>
+                   icon.replaceWith(newIcon);
+                   break;
+               }
+           }
+       });
+   }
+}
+
+// Chama a função para realizar as substituições
+updateHeaderIcons();
+
+</script>
+<script>
+function alterarImagens() {
+    // Seleciona todas as divs com a classe específica
+    const iconeONIlive = document.querySelectorAll('.other.activityiconcontainer.modicon_bigbluebuttonbn');
+    
+    iconeONIlive.forEach(div => {
+        // Seleciona a imagem dentro de cada div
+        const imgElement = div.querySelector('img.icon.activityicon');
+        
+        if (imgElement) {
+            // Altera o atributo src da imagem
+            imgElement.src = 'https://scorm.onilearning.com.br//imagens_ava//bbb.png';
+        }
+    });
+}
+alterarImagens();
+</script>
+<script>
+function alterarPlaceholder() {
+    // Seleciona o input pelo ID
+    const input = document.getElementById('username');
+    
+    if (input) {
+        // Altera o atributo placeholder
+        input.placeholder = 'Identificação de usuário';
+    }
+}
+alterarPlaceholder(); 
+</script>

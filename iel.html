@@ -1,0 +1,365 @@
+<style>
+   /* Ícones */
+   .ff_icon .ph-fill {
+      font-size: 54px;
+      color: #FFF;
+   }
+
+   .header_user_notif i.ph {
+      font-size: 20px;
+      position: relative;
+      top: 12%;
+      color: #7D37E2 !important;
+   }
+
+   img.logo1.img-fluid,
+   img.logo2.img-fluid {
+      margin-right: 32px;
+   }
+
+   .header_user_notif .dropdown span,
+   .header_user_notif .dropdown .icon {
+      color: #7D37E2;
+   }
+
+   #page-my-index .dashbord nav.breadcrumb_widgets {
+      display: none;
+   }
+
+   #page-my-index .dashbord nav.moremenu.navigation.observed,
+   #page-my-index .dashbord .ccn_breadcrumb_widgets {
+      display: none;
+   }
+
+   .dashbord .ccnDashBlCt {
+      padding: 0;
+      padding-right: 32px;
+   }
+
+   .ccnDashBl,
+   .ccn_context_dashboard .cs_row_seven .sfeedbacks {
+      background-color: transparent;
+      box-shadow: none;
+   }
+
+   @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
+
+   .activitytitle .activityiconcontainer {
+      background-color: transparent !important;
+   }
+
+   .activityiconcontainer .activityicon,
+   .activityiconcontainer.content .icon {
+      filter: none !important;
+      height: 40px !important;
+      width: 40px;
+      margin: 0;
+      padding: 0;
+   }
+
+   .activityiconcontainer {
+      padding: 0;
+   }
+
+   .activity-item:not(.activityinline) {
+      border: none;
+      border-bottom: 1px solid #dee2e6 !important;
+      border-radius: 0;
+      padding-bottom: 16px !important;
+   }
+
+   .format-topics .course-content .sectionname {
+      font-size: 24px;
+      font-weight: 700;
+   }
+
+   li.section:last-child {
+      border-bottom: none !important;
+   }
+
+   li.section {
+      list-style: none;
+      background: transparent !important;
+   }
+
+   /*.sectionname::before {
+       content: "\F124";
+       font-family: "bootstrap-icons";
+       font-size: 24px;
+   }*/
+
+   #page-login-index header.header-nav.menu_style_home_one {
+      border-bottom: none;
+   }
+
+   .path-login .inner_page_breadcrumb {
+      background-position: center;
+   }
+
+   #page-site-index header.ccnHeader1.header-nav.menu_style_home_one.navbar-scrolltofixed.stricky.main-menu.scroll-to-fixed-fixed.slideIn.animated,
+   #page-site-index header.ccnHeader1.header-nav.menu_style_home_one.navbar-scrolltofixed.stricky.main-menu.scroll-to-fixed-fixed {
+      background: #7D37E2 !important;
+   }
+
+   #page-site-index nav.ccn_nav_group a {
+      color: white !important;
+   }
+
+   #page-site-index .inner_page_breadcrumb {
+      background-image: url(//dev.krissiesodre.com/view/iel_backgroundLogin.png);
+      background-repeat: no-repeat;
+      margin-top: 60px;
+      height: calc(100vw * 0.48);
+   }
+
+   #page-site-index .inner_page_breadcrumb .breadcrumb_title {
+      display: none;
+   }
+
+   #page-site-index .inner_page_breadcrumb::before {
+      background-image: none;
+   }
+
+   #page-site-index ol.breadcrumb {
+      display: none;
+   }
+
+   a.btn.flaticon-user {
+      color: #7D37E2;
+   }
+
+   #page-site-index header.ccnHeader1.header-nav.menu_style_home_one.navbar-scrolltofixed.stricky.main-menu.scroll-to-fixed-fixed.stricky-fixed.slideInDown.animated {
+      display: none;
+   }
+
+   #page-site-index .menu_style_home_one.stricky-fixed {
+      position: relative !important;
+   }
+
+   #page-site-index .menu_style_home_one.stricky-fixed a {
+      color: white !important;
+   }
+
+   #page-site-index .ccn_nav_group a.navbar_brand.float-left.dn-smd span,
+   a.navbar_brand.float-left.dn-smd span,
+   .footer_middle_area .logo-widget.home1 {
+      display: none;
+   }
+
+   #page-site-index .container.ccn_breadcrumb_widgets.clearfix {
+      display: none !important;
+   }
+
+   .footer_company_widget a {
+      font-size: 28px;
+   }
+
+   header.ccnHeader1.header-nav.menu_style_home_one.navbar-scrolltofixed.stricky.main-menu.scroll-to-fixed-fixed {
+      background-color: #FFF !important;
+      background: #FFF !important;
+   }
+
+   #page-course-view-topics .inner_page_breadcrumb {
+      /*background-image: url(https://dev.krissiesodre.com/view/iel_backgroundLogin.png);*/
+      background-size: cover;
+      margin-top: 80px;
+      height: auto;
+   }
+
+   #page-course-view-topics .inner_page_breadcrumb::before {
+      background-image: none;
+   }
+
+   #page-course-view-topics .inner_page_breadcrumb .breadcrumb_content {
+      margin-top: 0 !important;
+   }
+
+   header.header-nav.menu_style_home_one .ace-responsive-menu li a {
+      color: #FFF;
+   }
+
+   .login_page_logo span {
+      display: none !important;
+   }
+
+   section.footer_middle_area.p0 .row {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   section.footer_middle_area.p0 .col-sm-4.col-md-3.col-lg-3.col-xl-3.pb15.pt15 {
+      display: none;
+   }
+
+   section.footer_middle_area.p0 .col-sm-12.col-md-4.col-lg-3.col-xl-3.pb15.pt15 {
+      display: flex;
+      justify-content: center;
+   }
+
+   .inner_page_breadcrumb:before{
+      background-image: -webkit-linear-gradient(135deg, #002D4C 0%, #002D4C 100%);
+   }
+
+   .footer_middle_area .col-sm-12.col-md-4.col-lg-3.col-xl-3.pb15.pt15 {
+      display: none !important;
+  }
+
+  .ccn_footer_style_1 .footer_middle_area, .ccn_footer_style_1 .footer_one {
+   display: none;
+}
+
+header.header-nav a.navbar_brand:before{
+   background-color: transparent !important;
+}
+
+@media (max-width: 1200px) {
+   body#page-site-index{
+      background: #7D37E2;
+   }
+
+   #page-site-index.notloggedin .inner_page_breadcrumb{
+      margin-top: 80px;
+   }
+}
+
+   @media (max-width: 900px) {
+      body#page-site-index {
+         min-height: 100vh;
+         background: transparent;
+      }
+
+      #page-site-index .inner_page_breadcrumb {
+         height: auto;
+         top: 24px;
+         background-size: cover;
+         background-position-x: center;
+         margin-bottom: 36px;
+      }
+
+      #page-site-index .mobile-menu .main_logo_home2 span {
+         display: none !important;
+      }
+
+      #page-site-index section.footer_one {
+         position: fixed;
+         bottom: 158px;
+         width: 100vw;
+         display: none;
+      }
+
+      #page-site-index div#page-content {
+         height: 60vh;
+      }
+
+      #page-site-index section.footer_middle_area.p0 {
+         position: fixed;
+         bottom: 72px;
+         width: 100vw;
+      }
+
+      #page-site-index section.footer_bottom_area.pt25.pb25 {
+         position: fixed;
+         bottom: 0;
+         width: 100vw;
+      }
+
+      #page-site-index .header.stylehome1,
+      .stylehome1:before {
+         background-color: #7D37E2 !important;
+         background: #7D37E2 !important;
+      }
+
+      #page-site-index a.mobileBrand {
+         display: none;
+      }
+
+      .imgBanner,
+      .mobileBrand {
+         display: none;
+      }
+
+      .my_course_content_header .d-flex.align-items-center {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         gap: 16px;
+      }
+
+      .dropdown {
+         width: 100%;
+      }
+
+      .dropdown button {
+         width: 100%;
+      }
+
+      .my_course_content_header .mr-2.flex-grow-1 {
+         width: 100%;
+      }
+
+      .ccn_coursecat_action_btns {
+         display: flex;
+         flex-direction: column;
+         padding: 16px;
+      }
+
+      #ccn-main-region {
+         padding-top: 4px;
+      }
+
+      .activityname a {
+         font-size: 18px;
+         word-break: break-word;
+      }
+
+      li.list-inline-item {
+         font-size: 18px;
+      }
+
+      li.nav-item a {
+         font-size: 16px;
+      }
+
+      .ccn_col_tree {
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+      }
+
+      .card-text {
+         display: flex;
+         flex-direction: column;
+         gap: 12px;
+         font-size: 16px;
+      }
+
+      .breadcrumb_widgets {
+         margin-top: 48px;
+      }
+
+      .section .activity.modtype_label.label .contentwithoutlink {
+         min-height: 0;
+         margin: 0;
+         padding: 0;
+      }
+
+      li.ccn_mob_menu_iconed.mm-listitem {
+         display: none;
+      }
+
+      .mm-page>.wrapper {
+         height: 100% !important;
+      }
+
+      .main_logo_home2 .mobileBrand{
+         display: none;
+      }
+
+      a.dropdown-toggle.active {
+         background: #7D37E2 !important;
+         color: white !important;
+      }
+   }
+</style>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
