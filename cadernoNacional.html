@@ -193,8 +193,49 @@
       cursor: pointer;
    }
 
+   .pagelayout-frontpage.notloggedin .imgFullDesktop{
+      margin-top: -10px;
+   }
+
    .cm_action_menu.actions a#action-menu-toggle-3 {
       background: #EB9D23;
+   }
+
+   .search_overlay {
+      display: none !important;
+   }
+
+   .pagelayout-frontpage ul.sign_up_btn.pull-right.dn-smd.mt20 {
+      display: none;
+   }
+
+   .pagelayout-frontpage.notloggedin ul.sign_up_btn.pull-right.dn-smd.mt20 {
+      display: block !important;
+   }
+
+   .pagelayout-frontpage.notloggedin header.header-nav.menu_style_home_one .sign_up_btn li.list_s {
+      border-right: none;
+  }
+
+  button.btnSec{
+   background: transparent;
+   color: #192675;
+  }
+
+  button.btnSec:hover{
+   background: #192675;
+   color: #fff;
+  }
+
+  @media (max-width: 1025px){
+   .stylehome1:before, .mobile-menu .header.stylehome1{
+      background: #151515 !important;
+   }
+
+   a.mobileBrand span {
+      display: none !important;
+   }
+
    }
 
    @media (max-width: 900px) {
@@ -226,7 +267,7 @@
 
       #page-site-index section.footer_middle_area.p0 {
          position: fixed;
-         bottom: 72px;
+         bottom: 70px;
          width: 100vw;
       }
 
@@ -234,6 +275,10 @@
          position: fixed;
          bottom: 0;
          width: 100vw;
+      }
+
+      .pagelayout-frontpage.notloggedin .imgFullDesktop {
+         margin-top: -70px;
       }
 
       a.mobileBrand span {
@@ -383,6 +428,10 @@
          height: 100%;
      }
 
+      nav.moremenu.navigation.observed {
+      display: none;
+      }
+
    }
 </style>
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -393,4 +442,42 @@
         style="width: 100%;" 
         src="https://ead.cadernonacional.com.br/draftfile.php/20/user/draft/916366542/465163725_8633229756773522_2442547785496840132_n.png" 
         alt="fundo">
-</a>
+</a> -->
+
+<style>
+   .notloggedin .container:has(img.img-fluid.align-top) {
+      margin-top: 92px;
+   }
+
+   .description img.img-fluid.align-top {
+      position: absolute;
+      top: -101px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      min-width: 100vw;
+  }
+
+   .candidate_revew_search_box.course.mb30.fn-520 {
+      margin-top: calc(100vw* 0.12);
+   }
+
+   @media(min-width: 2100px){
+      .candidate_revew_search_box.course.mb30.fn-520 {
+         margin-top: calc(100vw* 0.2);
+      }
+   }
+
+   @media(max-width: 900px){
+      .notloggedin .container {
+         margin-top: 0;
+      }
+
+      .description img.img-fluid.align-top {
+         position: absolute;
+         top: -96px;
+         min-width: calc(100% + 28px);
+     }
+
+   }
+</style>

@@ -1,0 +1,247 @@
+<style>
+
+   #tiles-overall-progress-outer{
+   display: none !important;
+   }
+   section.footer_one {
+         display: none;
+     }
+     
+     #ccn-main .cc_headers h4.title, #ccn-main .cc_headers {
+           display: none;
+     }
+   
+     .cs_row_three .course_content{
+      padding: 0 30px 30px;
+     }
+   
+     /* Bloco atividades */
+     .format-tiles ul.tiles#multi_section_tiles{
+      justify-content: center;
+     }
+   
+     .format-tiles .course-content ul.tiles .tile{
+      max-width: 250px;
+     }
+   
+     li.tile.spacer {
+      display: none !important;
+   }
+   
+   /* Config Banner */
+   div#buttonhidesec0 {
+      position: absolute;
+      right: -20px;
+      top: -40px;
+   }
+   
+   #ccn-main .course-content .col-sm-11 {
+      flex: 0 0 100%;
+      max-width: 100%;
+   }
+   
+   button.sectionbutton.open, button.closesectionbtn{
+      background-color: rgba(248, 69, 69, 1) !important;
+      border-color: transparent;
+   }
+   
+   button.sectionbutton.open img.icon, button.closesectionbtn img.icon{
+      filter: contrast(9);
+   }
+   .alert-success.icon-no-margin {
+       background: rgba(76, 189, 145, 1) !important;
+   }
+   
+   section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
+       height: 250px;
+   }
+   
+   .breadcrumb_content {
+       margin-top: 30px !important;
+   }
+   #page-user-profile .container.clearfix {
+       display: flex;
+       flex-direction: row;
+   }
+   
+   #page-user-profile #ccn-main-region {
+       padding-top: 16px;
+   }
+
+   section.inner_page_breadcrumb.ccn_breadcrumb_s.ccn_breadcrumb_xs.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-h.ccn-breadcrumb-trail-h{
+      margin-top: -30px;
+   }
+
+   .imgCadastro{
+      width: 100% !important;
+      cursor: pointer;
+   }
+   
+   .imgCadastro.desktop, .figureCadastro.desktop{
+      display: block;
+   }
+
+   .imgCadastro.mobile, .figureCadastro.mobile{
+      display: none;
+   }
+
+   .description .course-description-item:has(.imgCadastro), .container:has(.imgCadastro){
+      background-color: transparent !important;
+      padding: 0 !important;
+   }
+
+   #ccn-main-region:has(.imgCadastro){
+      padding: 0 !important;
+      margin-top: -20px !important;
+   }
+
+   @media (max-width: 900px){
+
+      .imgCadastro.desktop, .figureCadastro.desktop{
+         display: none;
+      }
+   
+      .imgCadastro.mobile, .figureCadastro.mobile{
+         display: block;
+      }
+
+         .page-mycourses #page-content .our-dashbord.dashbord.ccn_dashbord_disable_drawer .main_content_container .row .col-xl-12{
+         display: flex;
+         flex-direction: column-reverse;
+         }
+   .bannerDesktop, div#inst387{
+   display: none !important;
+   }
+   
+   img.nav_logo_img.img-fluid.float-left.mt20 {
+       height: 50px;
+       max-width: none;
+   }
+   
+   .d-flex.align-items-center {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 8px;
+   }
+   
+   .dropdown.mr-1, button#groupingdropdown, .d-flex.flex-wrap.align-items-center, .dropdown, button#sortingdropdown {
+       width: 100%;
+   }
+   }
+   </style>
+
+<!-- Importação de ícones -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<style>
+   .figureCadastro{
+      position: relative;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+   }
+
+   button.btnBackTerciary{
+      cursor: pointer;
+      z-index: 99999;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      height: 40px;
+      width: 40px;
+      background: #eeeeee;
+      border-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      border: 2px solid #005aa9;
+      color: #005aa9;
+      transition: 500ms;
+   }
+
+   button.btnBackTerciary:hover{
+      color: #eeeeee;
+      border-color: #eeeeee;
+      background: #005aa9;
+      transition: 500ms;
+   }
+
+   /* Tooltip */
+.tooltip{
+   position: absolute;   
+   left: 4px;
+   top: 61px !important;
+   z-index: 9999;
+   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+   display: none;
+}
+
+.tooltip.top{
+   top: calc(100% + 8px);
+}
+
+.tooltip.back{
+   bottom: calc(100% + 8px);
+}
+
+.arrowTooltip{
+   z-index: 2;
+   height: 10px;
+   width: 10px;
+   transform: rotate(45deg) translateX(-50%);
+   background: #eeeeee;
+   position: absolute;   
+   left: 32%;
+}
+
+.tooltip.top .arrowTooltip{
+   top: 0;
+}
+
+.tooltip.back .arrowTooltip{
+   bottom: -8px;
+}
+
+.textTooltip{
+   padding: 8px 16px;
+   border-radius: 8px;
+   background: #eeeeee;
+   z-index: 3;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 700;
+   color: #005aa9;
+}
+
+.btnTooltip:hover .tooltip{
+   display: block;
+}
+</style>
+
+<figure class="figureCadastro">
+   <div class="btnTooltip">
+      <button class="btnBackTerciary" type="button" onclick="location.href='https://suzukiacademy.onilearning.com.br/my/'">
+         <i class="ph ph-caret-left"></i>
+      </button>
+      <!-- Tooltip -->
+      <div class="tooltip back">
+         <div class="arrowTooltip"></div>
+         <div class="textTooltip">
+            <span>Voltar</span>
+         </div>
+      </div>
+      <!-- // -->
+   </div>
+   
+   <img src="https://cdn.krissiesodre.com/moodle/bannerCadastroDesktop.png" alt="Clique para efetuar seu cadastro na Suzuki Academy" class="img-fluid atto_image_button_text-bottom imgCadastro desktop" onclick="window.open('https://oni360.com.br/externo/oniacademy/autocadastro_suzuki/index.php?instituicao=299&amp;token=3e1e842fed318452fd53b7357a077856&amp;etapa=c4ca4238a0b923820dcc509a6f75849b', 
+'popupWindow', 
+'width=960,height=620,scrollbars=yes,resizable=yes')">
+
+<img src="https://cdn.krissiesodre.com/moodle/bannerCadastroMobile.png" alt="Clique para efetuar seu cadastro na Suzuki Academy" class="img-fluid atto_image_button_text-bottom imgCadastro mobile" onclick="window.open('https://oni360.com.br/externo/oniacademy/autocadastro_suzuki/index.php?instituicao=299&amp;token=3e1e842fed318452fd53b7357a077856&amp;etapa=c4ca4238a0b923820dcc509a6f75849b', 
+'popupWindow', 
+'width=960,height=620,scrollbars=yes,resizable=yes')">
+</figure>

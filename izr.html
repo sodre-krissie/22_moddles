@@ -1,5 +1,11 @@
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
 <style>
+   a .instancename {
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+  }
+  
 img#logo {
    height: 70px;
 }
@@ -30,6 +36,10 @@ footer .info.container2.clearfix {
 
 #page-my-index nav[aria-label="Links do site"] {
    display: none;
+}
+
+#page-my-index.page-mycourses nav[aria-label="Links do site"] {
+   display: flex;
 }
 
 .blcDivCards{
@@ -91,5 +101,361 @@ a.nav-link {
 
 span.icone{
    color: #570803;
+   font-size: 20px;
+}
+
+a.nav-link:hover span{
+   color: #fff;
+}
+
+#adaptable-page-header-wrapper #main-navbar {
+   margin-top: -30px;
+}
+
+#page .course-content ul li.section.main {
+   border: none;
+   border-bottom: 1px solid #c4c4c4;
+}
+
+button[aria-label*="feito"] {
+   background: #1a9c1a;
+}
+
+.courseindex .courseindex-item.pageitem {
+   background-color: #570803;
+}
+
+.courseindex .courseindex-item.pageitem:hover {
+   background-color: #A91106;
+}
+
+.coursebox.panel .panel-body {
+   border: none;
+   margin: 0;
+}
+
+.coursebox.panel.hover:hover .panel-body{
+   background-color: transparent
+}
+
+a.coursebtn.submit.btn.btn-info.btn-sm {
+   border: none !important;
+   background: #A91204 !important;
+}
+
+#page-login-index .outercont{
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.moremenu .nav-link.active{
+   border-bottom: #570803;
+}
+
+.moremenu .nav-link.active:focus, .moremenu .nav-link.active:hover {
+   border-bottom-color: red;
+}
+
+footer#page-footer {
+   padding: 48px;
+}
+
+/* Login */
+/*#page-login-index div#page-header {
+   background-image: url(https://cdn.krissiesodre.com/moodle/izrBackground.svg);
+   margin: 0;
+   width: 100vw;
+   height: calc(100vw* 0.48);
+   background-repeat: no-repeat;
+   background-size: contain;
+}*/
+
+#page-login-index .bd-highlight .d-none a {
+   display: none;
+}
+
+#page-login-index div#header1 {
+   background: #fff !important;
+}
+
+#page-login-index a.btn-login.d-inline-block {
+   border-radius: 6px;
+}
+
+.login-container {
+   border-radius: 24px;
+}
+
+.pagelayout-login #page {
+   background-image: linear-gradient(to right, #96999b 0%, #999999 100%);
+}
+
+/* Painel */
+#header1 {
+   background-color: #A91204;
+   border-bottom: 1px solid transparent;
+}
+
+/* Rodapé */
+footer#page-footer{
+   background-color: #151515;
+}
+
+.blcFooterLeft{
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   align-items: center;
+}
+
+.divFlexRow{
+   display: flex;
+   flex-direction: row;
+   gap: 16px;
+}
+
+.btnSocial{
+   height: 36px;
+   width: 36px;
+   border-radius: 20px;
+   border: none;
+   background: #A91204 !important;
+   color: #fff !important;
+   font-size: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   text-decoration: none !important;
+}
+
+.divFlexColumn{
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.divFlexColumn h2{
+   font-size: 24px;
+   color: #A91204;
+}
+
+.divFlexColumn p i.ph{
+   color: #A91204 !important;
+}
+
+/* Cursos */
+.coursebox.panel.hover:hover .panel-body .cimbox{
+   opacity: 1;
+   width: 100%;
+}
+
+.cimbox{
+   background-size: cover;
+   height: 200px;
+}
+
+.coursebox.panel.hover:hover .panel-body .coursebox-content h3, .coursebox.panel.hover:focus .panel-body .coursebox-content h3{
+   color: black;
+}
+
+.coursebox.hover:hover .summary{
+   display: none;
+}
+
+#frontpage-available-course-list .coursebox, #frontpage-course-list .coursebox, .course-search-result .coursebox {
+   padding: 0;
+   border: 1px solid gray;
+   margin-bottom: 8px;
+}
+
+.coursebox.panel.hover:hover a.coursebtn.submit.btn.btn-info.btn-sm {
+   background: #570803 !important;
+}
+
+/* Login */
+
+body.pagelayout-frontpage.notloggedin div#page-header {
+   display: flex !important;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: -36px !important;
+   padding: 0 16px;
+   background: #fff;
+   margin: 0;
+   width: 100%;
+}
+
+body.pagelayout-frontpage.notloggedin #page.drawers{
+   margin-top: 115px !important;
+}
+
+body.pagelayout-frontpage.notloggedin div#page-content {
+   display: flex;
+   flex-direction: column-reverse;
+}
+
+figure.figureBanner{
+   padding: 0;
+   margin: 0;
+   width: 100vw;
+   height: auto;
+   object-fit: cover;
+   position: relative;
+   left: -36px;
+}
+
+img.imgBanner{
+   width: 100vw;
+}
+
+body.pagelayout-login.notloggedin .container.outercont {
+   position: relative;
+   z-index: 9;
+}
+
+.login-container {
+   border-radius: 24px;
+   z-index: 999999;
+   width: 600px !important;
+   position: relative;
+   right: 50px;
+}
+
+.login-wrapper {
+   display: flex
+;
+   align-items: center;
+   justify-content: flex-end;
+   height: 100%;
+}
+
+body.pagelayout-login.notloggedin figure.figureBanner{
+   position: fixed;
+   z-index: 1;
+   left: 0;
+}
+
+body.pagelayout-login.notloggedin img.imgBanner {
+   width: auto;
+   padding: 0;
+   min-height: 100vh;
+   margin: 0;
+   min-width: 100vw;
+}
+
+.form-control{
+   border-radius: 4px;
+}
+
+.btn.btn-icon.icons-collapse-expand{
+   background-color: #570803 !important;
+}
+
+@media(max-width: 900px){
+   .activity-info {
+      padding-top: 16px;
+  }
+
+  .blcDivCards{
+   flex-direction: column;
+  }
+
+  .dropdown {
+   width: 100%;
+   }
+
+   .dropdown button {
+      width: 100%;
+   }
+
+   .my_course_content_header .mr-2.flex-grow-1 {
+      width: 100%;
+   }
+
+   .ccn_coursecat_action_btns {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+   }
+
+   #ccn-main-region {
+      padding-top: 4px;
+   }
+
+   .activityname a {
+      font-size: 18px;
+      word-break: break-word;
+   }
+
+   li.list-inline-item {
+      font-size: 18px;
+   }
+
+   li.nav-item a {
+      font-size: 16px;
+   }
+
+   .ccn_col_tree {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   .card-text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 16px;
+   }
+
+   .breadcrumb_widgets {
+      margin-top: 48px;
+   }
+
+   .section .activity.modtype_label.label .contentwithoutlink {
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+   }
+
+   li.ccn_mob_menu_iconed.mm-listitem {
+      display: none;
+   }
+
+   .mm-page>.wrapper {
+      height: 100% !important;
+   }
+
+   .main_logo_home2 .mobileBrand{
+      display: none;
+   }
+
+   .header.d-flex.flex-wrap.p-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+   }
+
+   .header.d-flex.flex-wrap.p-1 {
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+   }
+
+   .custom-select, .dropdown-toggle{
+      width: 100%;
+   }
+
+   .login-container {
+      right: 0;
+   }
+
+}
+
+.enabled {
+   top: 40% !important;
 }
 </style>

@@ -1,0 +1,263 @@
+<style>
+   /* Ícones */
+   .ff_icon .ph-fill {
+      font-size: 54px;
+      color: #FFF;
+   }
+
+   .header_user_notif i.ph {
+      font-size: 20px;
+      position: relative;
+      top: 12%;
+      color: #FFF !important;
+   }
+
+   /* Icone de Idioma */
+   li.user_setting.ccn-settings-nav.ccn-lang-menu {
+      display: none;
+   }
+
+   /* Cabeçalho */
+   .navbar_brand span {
+      display: none;
+   }
+
+   header nav.moremenu.navigation a.nav-link {
+      color: #3A73C1 !important;
+   }
+
+   /* Painel */
+   nav.breadcrumb_widgets.ccn-clip-l, .dashbord #page-heading-button, .dashbord #course-header, #page-my-index .moremenu.navigation.observed {
+      display: none;
+   }
+
+   .ccnDashBl.block_html.block {
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+   }
+
+   .ccnDashBl.block_html.block .ccnDashBlCt{
+      padding: 0;
+   }
+
+   /* Curso */
+   #page-course-view-topics .inner_page_breadcrumb .breadcrumb_content {
+      margin-top: 0;
+   }
+
+   #page-course-view-topics section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
+      margin-top: 90px;
+      height: 200px;
+      background-image: url(https://cdn.krissiesodre.com/moodle/maisedueadCourse.svg);
+   }
+
+   section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v::before{
+      background: none !important;
+   }
+
+   #page-course-view-topics div#ccn-main-region{
+      padding-top: 0;
+   }
+
+   #page-course-view-topics .course_content {
+      border: none !important;
+      padding-top: 0 !important;
+   }
+
+   #page-course-view-topics .cc_headers, #page-course-view-topics #user-notifications{
+      display: none;
+   } 
+
+   .activityiconcontainer.content .activityicon:not(.nofilter),
+   .activityiconcontainer.content .icon:not(.nofilter),
+   .activityiconcontainer.assessment .activityicon:not(.nofilter),
+   .activityiconcontainer.assessment .icon:not(.nofilter), .activityiconcontainer.collaboration .activityicon:not(.nofilter), .activityiconcontainer.collaboration .icon:not(.nofilter), .activityiconcontainer .activityicon, .activityiconcontainer .icon {
+      filter: none;
+      height: 50px;
+      width: 50px;
+      max-width: none;
+   }
+
+   .activityiconcontainer.content,
+   .activityiconcontainer.assessment {
+      background-color: transparent;
+   }
+
+   #page-course-view-topics section.footer_one, #page-course-view-topics section.footer_middle_area.p0{
+      display: none;
+   }
+   
+
+   /* Login */
+   /*#page-site-index*/
+
+   #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
+      margin-top: 90px;
+      height: calc(100vw* 0.48);
+      background-image: url(https://cdn.krissiesodre.com/moodle/maisedueadBackground.svg);
+   }
+
+   #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v .container{
+      display: none;
+   }
+
+   #page-site-index ul.sign_up_btn li a {
+      color: #3A73C1 !important;
+   }
+
+   #page-site-index section.footer_one, #page-site-index section.footer_middle_area.p0{
+      display: none;
+   }
+
+   @media (max-width: 1200px) {
+      body#page-site-index{
+         background: #3A73C1;
+      }
+   
+      #page-site-index.notloggedin .inner_page_breadcrumb{
+         margin-top: 80px;
+      }
+   }
+   
+      @media (max-width: 900px) {
+         body#page-site-index {
+            min-height: 100vh;
+            background: transparent;
+         }
+   
+         #page-site-index .inner_page_breadcrumb {
+            height: auto;
+            top: 24px;
+            background-size: cover;
+            background-position-x: center;
+            margin-bottom: 36px;
+         }
+   
+         #page-site-index .mobile-menu .main_logo_home2 span {
+            display: none !important;
+         }
+   
+         #page-site-index section.footer_one {
+            position: fixed;
+            bottom: 158px;
+            width: 100vw;
+            display: none;
+         }
+   
+         #page-site-index div#page-content {
+            height: 60vh;
+         }
+   
+         #page-site-index section.footer_middle_area.p0 {
+            position: fixed;
+            bottom: 72px;
+            width: 100vw;
+         }
+   
+         #page-site-index section.footer_bottom_area.pt25.pb25 {
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+         }
+   
+         #page-site-index .header.stylehome1,
+         .stylehome1:before {
+            background-color: #3A73C1 !important;
+            background: #3A73C1 !important;
+         }
+   
+         #page-site-index a.mobileBrand {
+            display: none;
+         }
+   
+         .imgBanner,
+         .mobileBrand {
+            display: none;
+         }
+   
+         .my_course_content_header .d-flex.align-items-center {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 16px;
+         }
+   
+         .dropdown {
+            width: 100%;
+         }
+   
+         .dropdown button {
+            width: 100%;
+         }
+   
+         .my_course_content_header .mr-2.flex-grow-1 {
+            width: 100%;
+         }
+   
+         .ccn_coursecat_action_btns {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+         }
+   
+         #ccn-main-region {
+            padding-top: 4px;
+         }
+   
+         .activityname a {
+            font-size: 18px;
+            word-break: break-word;
+         }
+   
+         li.list-inline-item {
+            font-size: 18px;
+         }
+   
+         li.nav-item a {
+            font-size: 16px;
+         }
+   
+         .ccn_col_tree {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+         }
+   
+         .card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 16px;
+         }
+   
+         .breadcrumb_widgets {
+            margin-top: 48px;
+         }
+   
+         .section .activity.modtype_label.label .contentwithoutlink {
+            min-height: 0;
+            margin: 0;
+            padding: 0;
+         }
+   
+         li.ccn_mob_menu_iconed.mm-listitem {
+            display: none;
+         }
+   
+         .mm-page>.wrapper {
+            height: 100% !important;
+         }
+   
+         .main_logo_home2 .mobileBrand{
+            display: none;
+         }
+   
+         a.dropdown-toggle.active {
+            background: #3A73C1 !important;
+            color: white !important;
+         }
+      }
+
+</style>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>

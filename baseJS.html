@@ -1,24 +1,29 @@
 <div vw class="enabled">
-   <div vw-access-button class="active"></div>
-   <div vw-plugin-wrapper>
-       <div class="vw-plugin-top-wrapper"></div>
-   </div>
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
 </div>
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>
-   new window.VLibras.Widget ( 'https://vlibras.gov.br/app' );
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
 <script>
-   $(document).ready(function(){
-       //$(".activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//trilha.png");
-       $(".activity.quiz .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//questionario.png");
-       $(".activity.url .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//linkexterno.png");
-       $(".activity.scorm .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//trilha.png");
-       $(".activity.lti .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//lti.png");
-       $(".activity.bigbluebuttonbn .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//bbb.png");
-       //$(".activity.wiki .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//audio.png");
-       //$(".activity.assign .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//audio.png");
-   });
+    $(document).ready(function(){
+        $(".activity.presentation .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/apresentacao.svg");
+        $(".activity.resource .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/arquivo.svg");
+        $(".activity.audio .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/audio.svg");
+        $(".activity.forum .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/avisos.svg");
+        $(".activity.bigbluebuttonbn .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/bbb.svg");
+        $(".activity.simplecertificate .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/certificado.svg");
+        $(".activity.simplecertificate .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/certificado.svg");
+        $(".activity.url .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/linkexterno.svg");
+        $(".activity.lti .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/lti.svg");
+        $(".activity.quiz .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/questionario.svg");
+        $(".activity.assign .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/tarefa.svg");
+        $(".activity.scorm .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/trilha.svg");
+        $(".activity.subcourse .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/disciplina.svg");
+    });
 </script>
 
 <script>
@@ -32,6 +37,7 @@ document.querySelectorAll('.ff_icon').forEach(icon => {
 'flaticon-cap': 'ph-fill ph-books',
        'ccn-flaticon-bookmark-1': 'ph-fill ph-books',
 'flaticon-settings': 'ph-fill ph-calendar-blank',
+'flaticon-calendar': 'ph-fill ph-calendar-blank',
        'flaticon-rating': 'ph-fill ph-exam',
    };
 

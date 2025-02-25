@@ -1,0 +1,255 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div vw class="enabled">
+   <div vw-access-button class="active"></div>
+   <div vw-plugin-wrapper>
+       <div class="vw-plugin-top-wrapper"></div>
+   </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+   new window.VLibras.Widget ( 'https://vlibras.gov.br/app' );
+</script>
+<script>
+   $(document).ready(function(){
+       //$(".activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//trilha.png");
+       $(".activity.quiz .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//questionario.png");
+       $(".activity.url .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//linkexterno.png");
+       $(".activity.scorm .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//trilha.png");
+       $(".activity.lti .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//lti.png");
+       $(".activity.bigbluebuttonbn .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//bbb.png");
+       //$(".activity.wiki .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//audio.png");
+       //$(".activity.assign .activity-instance").find("img").attr("src", "https://scorm.onilearning.com.br//imagens_ava//audio.png");
+   });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(".activity.presentation .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/apresentacao.svg");
+        $(".activity.resource .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/arquivo.svg");
+        $(".activity.audio .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/audio.svg");
+        $(".activity.forum .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/avisos.svg");
+        $(".activity.bigbluebuttonbn .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/bbb.svg");
+        $(".activity.simplecertificate .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/certificado.svg");
+        $(".activity.simplecertificate .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/certificado.svg");
+        $(".activity.url .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/linkexterno.svg");
+        $(".activity.lti .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/lti.svg");
+        $(".activity.quiz .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/questionario.svg");
+        $(".activity.assign .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/tarefa.svg");
+        $(".activity.scorm .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/trilha.svg");
+$(".activity.subcourse .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/disciplina.svg");
+    });
+</script>
+
+<script>
+document.querySelectorAll('.ff_icon').forEach(icon => {
+   const spanElement = icon.querySelector('span');
+
+   // Mapeamento de substituições: classes de <span> para classes de <i>
+   const replacementMap = {
+       'fa fa-book': 'ph-fill ph-book-open-text',
+       'flaticon-speech-bubble': 'ph-fill ph-book-open-text',
+'flaticon-cap': 'ph-fill ph-books',
+       'ccn-flaticon-bookmark-1': 'ph-fill ph-books',
+'flaticon-settings': 'ph-fill ph-calendar-blank',
+       'flaticon-rating': 'ph-fill ph-exam',
+   };
+
+   if (spanElement) {
+       const spanClassList = Array.from(spanElement.classList).join(' ');
+
+       // Verifica se as classes do <span> estão no mapeamento
+       if (replacementMap[spanClassList]) {
+           const newIcon = document.createElement('i');
+           newIcon.className = replacementMap[spanClassList];
+
+           // Substitui o <span> pelo novo <i> com as classes correspondentes
+           icon.replaceChild(newIcon, spanElement);
+       }
+   }
+});
+
+</script>
+<script>
+function updateHeaderIcons() {
+   const notifList = document.querySelector('.header_user_notif.ccn-frontend-header_user_notif.pull-right.dn-smd');
+
+   if (notifList) {
+       notifList.querySelectorAll('span, i').forEach(icon => {
+           // Mapeamento de substituições: classes do elemento atual para as classes do novo <i>
+           const replacementMap = {
+               'ccn-flaticon-hide': 'ph ph-moon',
+               'flaticon-alarm': 'ph ph-bell-simple',
+               'flaticon-speech-bubble': 'ph ph-chats-circle',
+               'flaticon-settings': 'ph ph-gear'
+           };
+
+           const iconClassList = Array.from(icon.classList).join(' ');
+
+           // Verifica se as classes do elemento estão no mapeamento
+           for (const [oldClasses, newClasses] of Object.entries(replacementMap)) {
+               if (iconClassList.includes(oldClasses)) {
+                   const newIcon = document.createElement('i');
+                   newIcon.className = newClasses;
+                   
+                   // Preserva o título, o papel e a descrição se o elemento original for um <i>
+                   if (icon.tagName === 'I') {
+                       newIcon.title = icon.title;
+                       newIcon.role = icon.role;
+                       newIcon.setAttribute('aria-label', icon.getAttribute('aria-label'));
+                   }
+                   
+                   // Substitui o elemento pelo novo <i>
+                   icon.replaceWith(newIcon);
+                   break;
+               }
+           }
+       });
+   }
+}
+
+// Chama a função para realizar as substituições
+updateHeaderIcons();
+
+</script>
+<script>
+document.querySelectorAll('span').forEach(span => {
+   const classMap = {
+       "fa-lg mr-1 fa fa-home": "icone ph-fill ph-house",
+       "fa-lg mr-1 fa fa-dashboard": "icone ph-fill ph-notebook",
+       "fa-lg mr-1 fa fa-th": "icone ph-fill ph-book-open",
+       "fa-lg mr-1 fa fa-calendar": "icone ph-fill ph-calendar-dots"
+   };
+
+   const currentClasses = span.className.trim(); // Obtém as classes atuais do elemento
+   if (classMap[currentClasses]) {
+       span.className = classMap[currentClasses]; // Substitui as classes
+   }
+});
+</script>
+<script>
+function addOnClickToCoursePanels() {
+   // Verifica se o elemento com id 'frontpage-available-course-list' existe
+   const courseList = document.querySelector("#frontpage-available-course-list");
+   if (!courseList) return;
+
+   // Seleciona todos os elementos com a classe 'panel-body clearfix'
+   const panels = courseList.querySelectorAll(".panel-body.clearfix");
+
+   panels.forEach(panel => {
+       // Procura o link dentro da estrutura do painel
+       const link = panel.querySelector("a");
+       if (link && link.href) {
+           // Adiciona o evento onclick ao painel para redirecionar para o href do link
+           panel.onclick = () => {
+               window.location.href = link.href;
+           };
+
+           // Opcional: Adiciona a classe cursor pointer para indicar que é clicável
+           panel.style.cursor = "pointer";
+       }
+   });
+}
+
+// Chama a função
+addOnClickToCoursePanels();
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Verifica se o body possui as classes desejadas
+        const body = document.body;
+        if (body.classList.contains("pagelayout-frontpage") && body.classList.contains("notloggedin")) {
+            // Adicionar elemento ao "page-content"
+            const pageContent = document.getElementById("page-content");
+            if (pageContent) {
+                const figure = document.createElement("figure");
+                figure.classList.add("figureBanner");
+    
+                const img = document.createElement("img");
+                img.src = "https://cdn.krissiesodre.com/moodle/izrBackground.svg"; // Substitua pelo caminho da sua imagem
+                img.alt = "Descrição da imagem";
+                img.classList.add("imgBanner");
+
+                img.onclick = () => {
+                    window.location.href = "https://zai.onilearning.com.br/login/index.php";
+                };
+    
+                figure.appendChild(img);
+                pageContent.appendChild(figure);
+            }
+    
+            // Adicionar elemento ao "page-header"
+            const pageHeader = document.getElementById("page-header");
+            if (pageHeader) {
+                const divFlexRow = document.createElement("div");
+                divFlexRow.classList.add("divFlexRow");
+    
+                const socialLinks = [
+                    {
+                        href: "https://www.facebook.com/institutozulemayramos",
+                        iconClass: "ph-bold ph-facebook-logo",
+                    },
+                    {
+                        href: "https://www.instagram.com/izrcursos/",
+                        iconClass: "ph-bold ph-instagram-logo",
+                    },
+                    {
+                        href: "https://www.youtube.com/@ZulemayRamos/featured",
+                        iconClass: "ph-fill ph-youtube-logo",
+                    },
+                ];
+    
+                socialLinks.forEach((link) => {
+                    const anchor = document.createElement("a");
+                    anchor.classList.add("btnSocial");
+                    anchor.href = link.href;
+                    anchor.target = "_blank";
+    
+                    const icon = document.createElement("i");
+                    icon.className = link.iconClass;
+    
+                    anchor.appendChild(icon);
+                    divFlexRow.appendChild(anchor);
+                });
+    
+                pageHeader.appendChild(divFlexRow);
+            }
+        }
+    });
+    
+    
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Verifica se o body possui as classes desejadas
+        const body = document.body;
+        if (body.classList.contains("pagelayout-login") && body.classList.contains("notloggedin")) {
+            // Adicionar elemento ao "page"
+            const page = document.getElementById("page");
+            if (page) {
+                const figure = document.createElement("figure");
+                figure.classList.add("figureBanner");
+    
+                const img = document.createElement("img");
+                img.src = "https://cdn.krissiesodre.com/moodle/izrBackground.svg"; // Caminho da imagem
+                img.alt = "Descrição da imagem";
+                img.classList.add("imgBanner");
+    
+                figure.appendChild(img);
+                page.appendChild(figure);
+            }
+        }
+    });
+    
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.body.id === "page-login-index") {
+            const bannerImg = document.querySelector("figure.figureBanner img.imgBanner");
+            if (bannerImg) {
+                bannerImg.src = "https://cdn.krissiesodre.com/moodle/izrBackgroundZero.svg";
+            }
+        }
+    });    
+</script>

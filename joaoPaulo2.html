@@ -1,0 +1,214 @@
+<!-- Importação de ícones -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<style>
+   /* Ícones do Painel */
+   .ff_icon .ph-fill {
+      font-size: 54px;
+      color: #FFF;
+   }
+
+   /* Ícones da barra usuário */
+   .header_user_notif i.ph {
+      font-size: 20px;
+      position: relative;
+      top: 12%;
+      color: #FFF !important;
+   }
+
+   /* Icone de Idioma */
+   li.user_setting.ccn-settings-nav.ccn-lang-menu {
+      display: none;
+   }
+
+   /* Ícone de settings no menu aluno */
+   nav.list-group a[data-key="sitesettings"]{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+   }
+
+   /* Header */
+   a.navbar_brand span{
+      display: none !important;
+   }
+
+/* Icones dentro de cursos */
+   .activityiconcontainer.content .activityicon:not(.nofilter),
+   .activityiconcontainer.content .icon:not(.nofilter),
+   .activityiconcontainer.assessment .activityicon:not(.nofilter),
+   .activityiconcontainer.assessment .icon:not(.nofilter), .activityiconcontainer.collaboration .activityicon:not(.nofilter), .activityiconcontainer.collaboration .icon:not(.nofilter), .activityiconcontainer .activityicon, .activityiconcontainer .icon {
+      filter: none;
+      height: 50px;
+      width: 50px;
+      max-width: none;
+   }
+
+   .activityiconcontainer.content,
+   .activityiconcontainer.assessment, .activityiconcontainer.collaboration {
+      background-color: transparent;
+   }
+/* Card do Curso */
+   .my_course_content_list .mc_content_list .thumb .overlay ul {
+      top: 0;
+      height: 100%;
+   }
+
+   .my_course_content_list .mc_content_list .thumb .overlay ul li {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      border-color: transparent;
+   }
+
+   .my_course_content_list .mc_content_list .thumb .overlay ul li a {
+      font-size: 16px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+.primary-navigation .navigation {
+    height: auto !important; 
+}
+
+/* Login */
+a.login_page_logo.text-center{
+   display: none;
+}
+
+.login_form.inner_page.style3{
+   padding: 0;
+}
+
+.our-log.style3:before{
+   position: fixed;
+}
+
+.our-log.style3 .divide, .our-log.style3 .ccn_first-time{
+   display: none;
+}
+
+button#loginbtn{
+   background: #19226a;
+   border-color: transparent;
+}
+
+button#loginbtn:hover{
+   background: #FFF;
+   border-color: #19226a;
+   color: #19226a;
+}
+</style>
+<style>
+   @media(max-width: 900px){
+      a.mobileBrand span{
+         display: none !important;
+      }
+      
+      .my_course_content_header .d-flex.align-items-center {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         gap: 16px;
+      }
+
+      .dropdown {
+         width: 100%;
+      }
+
+      .dropdown button {
+         width: 100%;
+      }
+
+      .my_course_content_header .mr-2.flex-grow-1 {
+         width: 100%;
+      }
+
+      .ccn_coursecat_action_btns {
+         display: flex;
+         flex-direction: column;
+         padding: 16px;
+      }
+
+      #ccn-main-region {
+         padding-top: 4px;
+      }
+
+      .activityname a {
+         font-size: 18px;
+         word-break: break-word;
+      }
+
+      li.list-inline-item {
+         font-size: 18px;
+      }
+
+      li.nav-item a {
+         font-size: 16px;
+      }
+
+      .ccn_col_tree {
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+      }
+
+      .card-text {
+         display: flex;
+         flex-direction: column;
+         gap: 12px;
+         font-size: 16px;
+      }
+
+      .breadcrumb_widgets {
+         margin-top: 48px;
+      }
+
+      .section .activity.modtype_label.label .contentwithoutlink {
+         min-height: 0;
+         margin: 0;
+         padding: 0;
+      }
+
+      li.ccn_mob_menu_iconed.mm-listitem {
+         display: none;
+      }
+
+      .mm-page>.wrapper {
+         height: 100% !important;
+      }
+
+      .main_logo_home2 .mobileBrand{
+         display: none;
+      }
+
+      /* Barra de progresso */
+      .ccn_mc_progress {
+         max-width: 100%;
+         margin: 5px;
+         display: inline-block;
+         min-width: 200px;
+         width: calc(100% - 20px);
+      }
+
+      /* Area do perfil */
+      #page-heading-button {
+         position: relative;
+         top: 20px;
+         display: flex;
+         flex-direction: column;
+         gap: 8px;
+      }
+
+      .singlebutton+.singlebutton {
+         margin-left: 0;
+      }
+
+      .singlebutton button {
+         width: 100%;
+      }
+   }
+</style>
