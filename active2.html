@@ -56,3 +56,51 @@
    }
    </style>
    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+   <!-- //Bugado: -->
+   <script>
+    function updateCourseCards() {
+        const links = document.querySelectorAll(".thumb .mcc_view");
+        console.log("Encontrados", links.length, "links para atualização");
+        
+        if (links.length === 0) {
+            console.log("Nenhum link encontrado, aguardando...");
+            return;
+        }
+        
+        links.forEach(viewLink => {
+            if (viewLink) {
+                console.log("Alterando texto de:", viewLink.textContent);
+                viewLink.textContent = "Visualizar Curso";
+            }
+        });
+    }
+    
+    // Observar mudanças no DOM para garantir que os elementos existam
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.body.id === "page-my-index") {
+            const observer = new MutationObserver(() => {
+                const preloader = document.querySelector(".preloader");
+                if (preloader && getComputedStyle(preloader).display === "none") {
+                    console.log("Preloader oculto, verificando elementos...");
+                    updateCourseCards();
+                }
+            });
+            
+            observer.observe(document.body, { attributes: true, subtree: true, childList: true });
+    
+            // Observar mudanças no DOM para detectar quando os elementos aparecem
+            const elementObserver = new MutationObserver(() => {
+                if (document.querySelector(".thumb .mcc_view")) {
+                    console.log("Elementos detectados, atualizando...");
+                    elementObserver.disconnect();
+                    updateCourseCards();
+                }
+            });
+            
+            elementObserver.observe(document.body, { childList: true, subtree: true });
+        }
+    });
+    
+    </script>

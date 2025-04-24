@@ -1,33 +1,21 @@
-<!-- 
-Backup de página inicial:
-
-Title: Ideal Business School
-Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvolver as habilidades-chave para você ganhar mais destaque, dinheiro e autoridade profissional.
--->
 <!-- Imagem Pagina Inicial deslogada -->
 <style>
-   #page-site-index .slide {
-      margin-top: 88px !important;
-      width: 100vw !important;
-      height: calc(100vw* 0.48) !important;
-      padding: 0 !important;
-      max-height: none !important;
-   }
-
-   #page-site-index .slide::before {
-      background-image: none !important;
-      opacity: 0;
-   }
+#page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
+   margin-top: 87px;
+   height: calc(100vw* 0.48);
+   background-image: url(https://cdn.krissiesodre.com/moodle/oniBackground.svg);
+}
 </style>
+
 
 <!-- Importação de ícones -->
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 <!-- Root -->
 <style>
-   :root {
-      --color-theme: #1E335B;
-      --color-header: #1E335B;
+   :root{
+      --color-theme: #003d6e;
+      --color-header: #003d6e;
       --color-text-header: #fff;
       --color-back-btn: #003d6e;
       --color-front-btn: #fff;
@@ -56,7 +44,7 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
    }
 
    /* Ícone de settings no menu aluno */
-   nav.list-group a[data-key="sitesettings"] {
+   nav.list-group a[data-key="sitesettings"]{
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -64,20 +52,16 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
    }
 
    /* Header */
-   a.navbar_brand span {
+   a.navbar_brand span{
       display: none !important;
    }
 
-   .img-fluid {
-      max-width: 100% !important;
+   header.header-nav.menu_style_home_one.stricky-fixed .ace-responsive-menu li a{
+      color: var(--color-text-header) !important;
    }
 
    /* Banner */
-   body#page-my-index .our-dashbord .row .col-lg-12:has(nav.breadcrumb_widgets) {
-      display: none;
-   }
-
-   #page-my-index .primary-navigation .navigation {
+   body#page-my-index .our-dashbord .row .col-lg-12:has(nav.breadcrumb_widgets){
       display: none;
    }
 
@@ -90,48 +74,11 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
       box-shadow: none;
    }
 
-   .no-overflow {
-      overflow: hidden;
-   }
-
-   #page-my-index nav.moremenu.navigation.observed {
-      display: none;
-   }
-
-   .dashbord .ccn_breadcrumb_widgets.container {
-      max-width: none;
-      margin-bottom: 16px !important;
-   }
-
-   body#page-course-view-weeks #ccn-main-region{
-      padding-top: 0 !important;
-   }
-
-   .inner_page_breadcrumb .breadcrumb_content {
-      margin-top: 0 !important;
-  }
-
-  .ccn_breadcrumb_m {
-   height: 198px;
-   padding: 0;
-   margin-top: 87px;
-   display: flex;
-   align-items: center;
-}
-
-#page-heading-button, #course-header, .context-header-settings-menu{
-   padding: 8px 0 8px;
-}
-
    /* Icones dentro de cursos */
    .activityiconcontainer.content .activityicon:not(.nofilter),
    .activityiconcontainer.content .icon:not(.nofilter),
    .activityiconcontainer.assessment .activityicon:not(.nofilter),
-   .activityiconcontainer.assessment .icon:not(.nofilter),
-   .activityiconcontainer.collaboration .activityicon:not(.nofilter),
-   .activityiconcontainer.collaboration .icon:not(.nofilter),
-   .activityiconcontainer .activityicon,
-   .activityiconcontainer .icon {
+   .activityiconcontainer.assessment .icon:not(.nofilter), .activityiconcontainer.collaboration .activityicon:not(.nofilter), .activityiconcontainer.collaboration .icon:not(.nofilter), .activityiconcontainer .activityicon, .activityiconcontainer .icon {
       filter: none;
       height: 50px;
       width: 50px;
@@ -139,8 +86,7 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
    }
 
    .activityiconcontainer.content,
-   .activityiconcontainer.assessment,
-   .activityiconcontainer.collaboration {
+   .activityiconcontainer.assessment, .activityiconcontainer.collaboration {
       background-color: transparent;
    }
 
@@ -172,7 +118,7 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
       border-bottom: none !important;
    }
 
-   body.pagelayout-frontpage.notloggedin .inner_page_breadcrumb:before {
+   body.pagelayout-frontpage.notloggedin .inner_page_breadcrumb:before{
       background-image: none;
    }
 
@@ -180,65 +126,37 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
       display: none;
    }
 
-   nav.navbar nav.moremenu a.nav-link.active,
-   ul.sign_up_btn a.flaticon-user,
-   span#search-button i {
+   nav.navbar nav.moremenu a.nav-link.active, ul.sign_up_btn a.flaticon-user, span#search-button i {
       color: var(--color-front-btn) !important;
    }
 
-   .sign_up_modal:before {
-      background-color: var(--color-theme) !important;
+   /* Página logada */
+   #page-site-index.pagelayout-frontpage .inner_page_breadcrumb:before{
+      background-image: none;
    }
 
+   #page-site-index.pagelayout-frontpage .inner_page_breadcrumb .breadcrumb_content h4, #page-site-index.pagelayout-frontpage .inner_page_breadcrumb ol.breadcrumb{
+      display: none;
+   }
 
+   .inner_page_breadcrumb .breadcrumb_title{
+      text-align: center;
+      margin-bottom: 16px;
+   }
 
    /* Footer */
    section.footer_middle_area.p0 {
       display: none;
    }
 
-   table th.header {
-      background: var(--color-theme) !important;
-   }
-
-   a.toggle-category {
-      background: var(--color-theme) !important;
-      border: none;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-
-   a.toggle-category i {
-      color: white !important;
-   }
-
-   .path-grade-report-user .user-grade .baggt {
-      background-color: #fff;
-   }
 </style>
 
 <!-- Style Mobile -->
 <style>
-   @media(max-width: 1025px) {
-
-      .stylehome1:before,
-      .mobile-menu .header.stylehome1 {
-         background-color: var(--color-theme) !important;
+   @media(max-width: 900px){
+      .stylehome1:before, .mobile-menu .header.stylehome1{
+         background-color: var(--color-theme);
       }
-   }
-
-   @media(max-width: 900px) {
-
-      #page-site-index .slide {
-         margin-top: 96px !important;
-      }
-
-      .scrollToHome {
-         bottom: 40px;
-      }
-
       .my_course_content_header .d-flex.align-items-center {
          display: flex;
          flex-direction: column;
@@ -256,6 +174,10 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
 
       .my_course_content_header .mr-2.flex-grow-1 {
          width: 100%;
+      }
+
+      .cs_row_three .course_content {
+         padding: 0;
       }
 
       .ccn_coursecat_action_btns {
@@ -312,7 +234,7 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
          height: 100% !important;
       }
 
-      .main_logo_home2 .mobileBrand {
+      .main_logo_home2 .mobileBrand{
          display: none;
       }
 
@@ -331,6 +253,20 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
       }
 
       /* Area do perfil */
+      #page-user-profile .instructor_thumb.text-center img {
+         height: 70px;
+         width: 70px;
+         margin-top: 82px;     
+      }
+      .inner_page_breadcrumb{
+         height: auto !important;
+      }
+
+      .inner_page_breadcrumb .breadcrumb_title{
+         font-size: 24px;
+         text-align: center;
+      }
+
       #page-heading-button {
          position: relative;
          top: 20px;
@@ -351,25 +287,7 @@ Subtitle: A Ideal Business School é uma plataforma de cursos dedicada a desenvo
 
 <!-- Style Dark Mode -->
 <style>
-   body.ccn_context_dashboard.ccnDarkMode.ccn_context_dashboard,
-   .ccnDarkMode.ccn_context_dashboard header.header-nav.menu_style_home_one.dashbord_pages,
-   .ccnDarkMode.ccn_context_dashboard .our-dashbord,
-   .ccnDarkMode.ccn_context_dashboard .dashboard_sidebar:before,
-   .ccnDarkMode.ccn_context_dashboard#page-my-index,
-   .ccnDarkMode.ccn_context_dashboard .message_container .iu_heading .candidate_revew_search_box input.form-control,
-   .ccnDarkMode.ccn_context_dashboard .message_container .message_input input.form-control,
-   .ccnDarkMode.ccn_context_dashboard .message_container .message_input textarea.form-control,
-   .ccnDarkMode.ccn_context_dashboard .modal-content,
-   .ccnDarkMode.ccn_context_dashboard .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content,
-   .ccnDarkMode.ccn_context_dashboard #plugins-check-page .pluginupdateinfo,
-   .ccnDarkMode.ccn_context_dashboard #plugins-control-panel .pluginupdateinfo,
-   .ccnDarkMode.ccn_context_dashboard#plugins-check-page .pluginupdateinfo,
-   .ccnDarkMode.ccn_context_dashboard#plugins-control-panel .pluginupdateinfo,
-   .ccnDarkMode.ccn_context_dashboard .preloader,
-   .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton,
-   .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight,
-   .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton.invalidanswer .trafficlight,
-   .ccnDarkMode.ccn_context_dashboard .message_container .message_input {
+   body.ccn_context_dashboard.ccnDarkMode.ccn_context_dashboard, .ccnDarkMode.ccn_context_dashboard header.header-nav.menu_style_home_one.dashbord_pages, .ccnDarkMode.ccn_context_dashboard .our-dashbord, .ccnDarkMode.ccn_context_dashboard .dashboard_sidebar:before, .ccnDarkMode.ccn_context_dashboard#page-my-index, .ccnDarkMode.ccn_context_dashboard .message_container .iu_heading .candidate_revew_search_box input.form-control, .ccnDarkMode.ccn_context_dashboard .message_container .message_input input.form-control, .ccnDarkMode.ccn_context_dashboard .message_container .message_input textarea.form-control, .ccnDarkMode.ccn_context_dashboard .modal-content, .ccnDarkMode.ccn_context_dashboard .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content, .ccnDarkMode.ccn_context_dashboard #plugins-check-page .pluginupdateinfo, .ccnDarkMode.ccn_context_dashboard #plugins-control-panel .pluginupdateinfo, .ccnDarkMode.ccn_context_dashboard#plugins-check-page .pluginupdateinfo, .ccnDarkMode.ccn_context_dashboard#plugins-control-panel .pluginupdateinfo, .ccnDarkMode.ccn_context_dashboard .preloader, .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton, .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight, .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton.invalidanswer .trafficlight, .ccnDarkMode.ccn_context_dashboard .message_container .message_input{
       background-color: #343434;
    }
 </style>

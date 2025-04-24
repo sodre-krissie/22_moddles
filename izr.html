@@ -1,5 +1,13 @@
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
 <style>
+   @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
+@import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
+@import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
+@import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
+   :root{
+      --color-theme: #A91204;
+      --color-text-header: #fefefe;
+   }
    a .instancename {
       white-space: nowrap;
       overflow: hidden;
@@ -353,7 +361,62 @@ body.pagelayout-login.notloggedin img.imgBanner {
    background-color: #570803 !important;
 }
 
+.btn.btn-icon.icons-collapse-expand i.icon.fa-chevron-down, .btn.btn-icon.icons-collapse-expand i.icon.fa-chevron-right{
+   color: var(--color-text-header) !important;
+}
+
+.customfield.customfield_select.customfield_edwskilllevel {
+   display: none;
+}
+
+figure.figureBanner {
+   padding: 0;
+   margin: 0;
+   width: 100vw;
+   height: auto;
+   object-fit: cover;
+   position: relative;
+   left: -10%;
+   margin-top: -10%;
+}
+
+#page .course-content ul li.section.main {
+   border: none;
+   border-bottom: 1px solid transparent;
+}
+
+footer#page-footer {
+   display: none;
+}
+
+.pagelayout-login #page div[role="main"] {
+   height: 100%;
+   display: flex;
+   justify-content: flex-end;
+}
+
+#page-login-index .login-container .loginform{
+   margin: 0 !important;
+}
+
+body#page-login-index figure.figureBanner{
+   display: none;
+}
+
+body.pagelayout-login #page {
+   background-image: url(https://cdn.krissiesodre.com/moodle/izrBackgroundZero.svg);
+   background-size: cover;
+}
+
+.activityiconcontainer.collaboration:not(.isbranded) .activityicon:not(.nofilter), .activityiconcontainer.collaboration:not(.isbranded) .icon:not(.nofilter), .activityiconcontainer.assessment:not(.isbranded) .activityicon:not(.nofilter), .activityiconcontainer.assessment:not(.isbranded) .icon:not(.nofilter), .activityiconcontainer.content:not(.isbranded) .activityicon:not(.nofilter), .activityiconcontainer.content:not(.isbranded) .icon:not(.nofilter) {
+   filter: none !important;
+}
+
 @media(max-width: 900px){
+   body.has-secondarynavigation .drawer-toggles .drawer-toggler {
+      position: fixed;
+      top: 200px;
+  }
    .activity-info {
       padding-top: 16px;
   }
@@ -452,6 +515,14 @@ body.pagelayout-login.notloggedin img.imgBanner {
    .login-container {
       right: 0;
    }
+
+   figure.figureBanner{
+      left: -3%;
+   }
+
+   section#inst43 {
+      display: none;
+  }
 
 }
 
