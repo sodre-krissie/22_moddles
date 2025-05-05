@@ -2,8 +2,26 @@
 <style>
    #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
       margin-top: 87px;
-      height: calc(100vw* 0.48);
-      background-image: url(https://cdn.krissiesodre.com/moodle/oniBackground.svg);
+      height: calc(100vw* 0.48) !important; 
+      background-image: url(https://cdn.krissiesodre.com/moodle/ciaedBackground.svg);
+   }
+
+   #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v, .login-bg, .sign_up_modal:before {
+      background-image: url(https://cdn.krissiesodre.com/moodle/ciaedBackgroundTela.svg);
+      background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+   #page-login-index .inner_page_breadcrumb:before{
+      background-image: none;
+   }
+
+   #page-login-index .inner_page_breadcrumb .container {
+      display: none;
+   }
+
+   .modal-content{
+      border: none;
    }
    </style>
    
@@ -14,10 +32,10 @@
    <!-- Root -->
    <style>
       :root{
-         --color-theme: #003d6e;
-         --color-header: #003d6e;
+         --color-theme: #F5BA42;
+         --color-header: #F5BA42;
          --color-text-header: #fff;
-         --color-back-btn: #003d6e;
+         --color-back-btn: #F5BA42;
          --color-front-btn: #fff;
          --color-body: #003d6e;
       }
@@ -67,6 +85,10 @@
    
       /* Banner */
       body#page-my-index .our-dashbord .row .col-lg-12:has(nav.breadcrumb_widgets){
+         display: none;
+      }
+
+      #page-site-index .container.ccn_breadcrumb_widgets.clearfix {
          display: none;
       }
    
@@ -159,9 +181,13 @@
          text-align: center;
          margin-bottom: 16px;
       }
+
+      body:not(.ccn_header_style_7) .navbar_brand img, .ccn_header_style_2 .logo-widget img {
+         max-width: 100%;
+      }
    
       /* Footer */
-      section.footer_middle_area.p0 {
+      section.footer_middle_area.p0, section.footer_one {
          display: none;
       }
    
@@ -202,14 +228,72 @@
          .grade-report-user .user-grade .baggt{
             background-color: #fff;
          }
+
+      /* Calendario */
+      .maincalendar .calendarmonth td.today .day-number-circle {
+         background-color: var(--color-back-btn);
+      }
+
+      .maincalendar .calendarmonth td .day-number-circle {
+         display: flex     ;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .mobile{
+         display: none !important;
+      }
+
+      .desktop{
+         display: inline-block !important;
+      }
+   
    </style>
    
    <!-- Style Mobile -->
    <style>
+      @media(max-width: 1200px){
+         .stylehome1:before, .mobile-menu .header.stylehome1{
+            background-color: var(--color-theme) !important;
+         }
+         
+         /* Header */
+         a.navbar_brand span{
+            display: none !important;
+         }
+      }
       @media(max-width: 900px){
          .stylehome1:before, .mobile-menu .header.stylehome1{
-            background-color: var(--color-theme);
+            background-color: var(--color-theme) !important;
          }
+
+         #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v, .login-bg, .sign_up_modal:before{
+            margin-top: 95px;
+         }
+
+         #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
+            margin-top: 87px;
+            height: calc(100vh - 87px - 71px) !important;
+            background-image: url(https://cdn.krissiesodre.com/moodle/ciaedBackgroundMobile.svg);
+            background-position-y: center;
+            width: 100vw;
+            background-position: center;
+         }
+
+         body#page-login-index {
+            background-image: url(https://cdn.krissiesodre.com/moodle/ciaedBackgroundTela.svg);
+         }
+
+         .section.our-log.bgc-fa{
+            padding: 10% 5% !important;
+         }
+
+         section.footer_bottom_area.pt25.pb25 {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+         }
+
          .my_course_content_header .d-flex.align-items-center {
             display: flex;
             flex-direction: column;
@@ -334,6 +418,14 @@
    
          .singlebutton button {
             width: 100%;
+         }
+
+         .desktop{
+            display: none !important;
+         }
+
+         .mobile{
+            display: inline-block !important;
          }
       }
    </style>
