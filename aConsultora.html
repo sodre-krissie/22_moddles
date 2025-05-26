@@ -107,3 +107,301 @@ img.activityicon {
 }
 
 </style>
+
+<!-- Root -->
+   <style>
+      :root{
+         --color-theme: #4C1228;
+         --color-header: #4C1228;
+         --color-text-header: #fff;
+         --color-back-btn: #4C1228;
+         --color-front-btn: #fff;
+         --color-body: #4C1228;
+      }
+
+   </style>
+   <!-- Style Desktop -->
+   <style>
+      /* Ícones do Painel */
+      .ff_icon .ph-fill {
+         font-size: 54px;
+         color: #FFF;
+      }
+
+      .col-sm-12.col-md-12.col-lg-4.col-xl-4 {
+         display: flex;
+         justify-content: center;
+      }
+   
+      /* Ícones da barra usuário */
+      .header_user_notif i.ph {
+         font-size: 20px;
+         position: relative;
+         top: 12%;
+         color: var(--color-front-btn) !important;
+      }
+   
+      /* Icone de Idioma */
+      li.user_setting.ccn-settings-nav.ccn-lang-menu {
+         display: none;
+      }
+   
+      /* Ícone de settings no menu aluno */
+      nav.list-group a[data-key="sitesettings"]{
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         gap: 16px;
+      }
+
+      /* Notas */
+         .path-grade-report-user .user-grade thead th, .grade-report-user .user-grade thead th, .path-calendar .maincalendar .calendarwrapper .calendartable th.header{
+            background-color: var(--color-theme);
+         }
+   
+         .path-grade-report-user .user-grade th.category a.toggle-category, .grade-report-user .user-grade th.category a.toggle-category{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--color-theme);
+            border: none;
+         }
+   
+         td.level1.d1.b1t.b2b.b1l.cell.c0.lastcol, .path-grade-report-user .user-grade th.category, .grade-report-user .user-grade th.category {
+            border: none !important;
+         }
+   
+         .grade-report-user .user-grade .baggt{
+            background-color: #fff;
+         }
+
+      /* Calendario */
+      .maincalendar .calendarmonth td.today .day-number-circle {
+         background-color: var(--color-back-btn) !important;
+      }
+
+      .maincalendar .calendarmonth td .day-number-circle {
+         display: flex     ;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .mobile{
+         display: none !important;
+      }
+
+      .desktop{
+         display: inline-block !important;
+      }
+
+      /* Banner */
+      body#page-my-index .our-dashbord .row .col-lg-12:has(nav.breadcrumb_widgets){
+         display: none;
+      }
+
+      #page-site-index .container.ccn_breadcrumb_widgets.clearfix {
+         display: none;
+      }
+   
+      .ccnBlockContent.ccnDashBlCt {
+         padding: 0;
+      }
+   
+      .block.ccnDashBl {
+         background: transparent;
+         box-shadow: none;
+      }
+
+      #page-course-view-topics #ccn-main-region{
+         padding-top: 0;
+      }
+
+      #page-course-view-topics #page-heading-button, #page-my-index #page-heading-button, #page-my-index .primary-navigation{
+         display: none;
+      }
+      .cs_row_three .course_content{
+         border: none;
+      }
+   
+      /* Icones dentro de cursos */
+      .activityiconcontainer.content .activityicon:not(.nofilter),
+      .activityiconcontainer.content .icon:not(.nofilter),
+      .activityiconcontainer.assessment .activityicon:not(.nofilter),
+      .activityiconcontainer.assessment .icon:not(.nofilter), .activityiconcontainer.collaboration .activityicon:not(.nofilter), .activityiconcontainer.collaboration .icon:not(.nofilter), .activityiconcontainer .activityicon, .activityiconcontainer .icon {
+         filter: none;
+         height: 50px;
+         width: 50px;
+         max-width: none;
+      }
+   
+      .activityiconcontainer.content,
+      .activityiconcontainer.assessment, .activityiconcontainer.collaboration {
+         background-color: transparent;
+      }
+   </style>
+   <!-- Style Mobile -->
+   <style>
+      @media(max-width: 1200px){
+         .stylehome1:before, .mobile-menu .header.stylehome1{
+            background-color: var(--color-theme) !important;
+         }
+         
+         /* Header */
+         a.navbar_brand span{
+            display: none !important;
+         }
+      }
+      @media(max-width: 900px){
+         .stylehome1:before, .mobile-menu .header.stylehome1{
+            background-color: var(--color-theme) !important;
+         }
+
+         #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v, .login-bg, .sign_up_modal:before{
+            margin-top: 95px;
+         }
+
+         .section.our-log.bgc-fa{
+            padding: 10% 5% !important;
+         }
+
+         section.footer_bottom_area.pt25.pb25 {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+         }
+
+         .my_course_content_header .d-flex.align-items-center {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 16px;
+         }
+   
+         .dropdown {
+            width: 100%;
+         }
+   
+         .dropdown button {
+            width: 100%;
+         }
+   
+         .my_course_content_header .mr-2.flex-grow-1 {
+            width: 100%;
+         }
+   
+         .cs_row_three .course_content {
+            padding: 0;
+         }
+   
+         .ccn_coursecat_action_btns {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+         }
+   
+         #ccn-main-region {
+            padding-top: 4px;
+         }
+   
+         .activityname a {
+            font-size: 18px;
+            word-break: break-word;
+         }
+   
+         li.list-inline-item {
+            font-size: 18px;
+         }
+   
+         li.nav-item a {
+            font-size: 16px;
+         }
+   
+         .ccn_col_tree {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+         }
+   
+         .card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 16px;
+         }
+   
+         .breadcrumb_widgets {
+            margin-top: 48px;
+         }
+   
+         .section .activity.modtype_label.label .contentwithoutlink {
+            min-height: 0;
+            margin: 0;
+            padding: 0;
+         }
+   
+         li.ccn_mob_menu_iconed.mm-listitem {
+            display: none;
+         }
+   
+         .mm-page>.wrapper {
+            height: 100% !important;
+         }
+   
+         .main_logo_home2 .mobileBrand{
+            display: none;
+         }
+   
+         a.dropdown-toggle.active {
+            background: var(--color-back-btn) !important;
+            color: var(--color-front-btn) !important;
+         }
+   
+         /* Barra de progresso */
+         .ccn_mc_progress {
+            max-width: 100%;
+            margin: 5px;
+            display: inline-block;
+            min-width: 200px;
+            width: calc(100% - 20px);
+         }
+   
+         /* Area do perfil */
+         #page-user-profile .instructor_thumb.text-center img {
+            height: 70px;
+            width: 70px;
+            margin-top: 82px;     
+         }
+         .inner_page_breadcrumb{
+            height: auto !important;
+         }
+   
+         .inner_page_breadcrumb .breadcrumb_title{
+            font-size: 24px;
+            text-align: center;
+         }
+   
+         #page-heading-button {
+            position: relative;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+         }
+   
+         .singlebutton+.singlebutton {
+            margin-left: 0;
+         }
+   
+         .singlebutton button {
+            width: 100%;
+         }
+
+         .desktop{
+            display: none !important;
+         }
+
+         .mobile{
+            display: inline-block !important;
+         }
+      }
+   </style>

@@ -27,6 +27,44 @@
 </script>
 
 <script>
+    $(document).ready(function () {
+  if ($("body").attr("id") === "page-course-view-cards") {
+    $(".activitytitle").each(function () {
+      const $activity = $(this);
+      const $img = $activity.find(".activityiconcontainer img");
+      const $instancename = $activity.find(".instancename").first();
+      const texto = $instancename.clone().children().remove().end().text().trim(); // remove span.accesshide
+
+      if (texto === "Conteúdo") {
+        $img.attr("src", "https://cdn.krissiesodre.com/moodle/icones/trilha.svg");
+      } else if (texto === "Questionário") {
+        $img.attr("src", "https://cdn.krissiesodre.com/moodle/icones/questionario.svg");
+      }
+    });
+  }
+});
+
+
+$(document).ready(function () {
+    if ($("body").attr("id") === "page-course-view-cards") {
+  $('.section-completion').each(function () {
+    const $div = $(this);
+    const nodes = $div.contents();
+
+    nodes.each(function () {
+      if (this.nodeType === 3 && this.nodeValue.includes('{$a->porcentagem}%')) {
+        // Empacota o texto em um <span> e aplica cor transparente
+        const $span = $('<span>').text(this.nodeValue).css('color', 'transparent');
+        $(this).replaceWith($span);
+      }
+    });
+  });
+}
+});
+
+</script>
+
+<script>
 document.querySelectorAll('.ff_icon').forEach(icon => {
    const spanElement = icon.querySelector('span');
 
