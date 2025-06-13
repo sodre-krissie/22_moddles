@@ -1,84 +1,13 @@
-<script>
-function importarPhosphorIcons() {
-  const style = document.createElement("style");
-  style.textContent = `
-    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
-    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
-    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
-    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
-  `;
-  document.head.appendChild(style);
-}
-importarPhosphorIcons();
-
-function protegerBlcIcones() {
-  const iconesOriginais = {
-    "Meus Cursos": { icon: "ph-book-open-text", bg: "#FFCC00" },
-    "Biblioteca": { icon: "ph-book", bg: "#FF6900" },
-    "Calendário": { icon: "ph-calendar-blank", bg: "#34529A" },
-    "Notas": { icon: "ph-exam", bg: "#003C70" },
-  };
-
-  function restaurarIcones() {
-    document.querySelectorAll('.cardPainel').forEach(card => {
-      const label = card.querySelector('span')?.textContent?.trim();
-      const iconeData = iconesOriginais[label];
-
-      if (iconeData) {
-        const blcIcone = card.querySelector('.blcIcone');
-        if (blcIcone) {
-          const atualIcone = blcIcone.querySelector('i');
-          const correto = `<i class="ph ${iconeData.icon}" tabindex="-1"></i>`;
-          const precisaAtualizar = !atualIcone || atualIcone.className !== `ph ${iconeData.icon}`;
-
-          if (precisaAtualizar) {
-            blcIcone.innerHTML = correto;
-            blcIcone.style.backgroundColor = iconeData.bg;
-          }
-        }
-      }
-    });
-  }
-
-  // Restaura inicialmente
-  restaurarIcones();
-
-  // Observa mudanças no body
-  const observer = new MutationObserver(() => {
-    restaurarIcones();
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
-}
-
-// Ativar ao carregar a página
-window.addEventListener('DOMContentLoaded', protegerBlcIcones);
-
-</script>
-
 <!-- Imagem Pagina Inicial deslogada -->
 <style>
-   .pagelayout-login #page{
-      background-image: url(https://cdn.krissiesodre.com/moodle/multiplaEscolhaBackgroundTela.svg) !important;
-      background-size: cover !important;
-      background-repeat: no-repeat !important;
-   }
-
-   .login-container{
-      padding: 24px;
-   }
-
-   button#loginbtn {
-      width: 100%;
-   }
    #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
       margin-top: 87px;
       height: calc(100vw* 0.48) !important; 
-      background-image: url(https://cdn.krissiesodre.com/moodle/multiplaTesteBackground.svg);
+      background-image: url(https://cdn.krissiesodre.com/moodle/locusBackground.svg);
    }
 
    #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v, .login-bg, .sign_up_modal:before {
-      background-image: url(https://cdn.krissiesodre.com/moodle/multiplaTesteBackgroundTela.svg);
+      background-image: url(https://cdn.krissiesodre.com/moodle/locusBackgroundTela.svg);
       background-repeat: no-repeat;
       background-size: cover;
    }
@@ -114,10 +43,10 @@ window.addEventListener('DOMContentLoaded', protegerBlcIcones);
    <!-- Root -->
    <style>
       :root{
-         --color-theme: #003C70;
+         --color-theme: #8AC73E;
          --color-header: #fff;
-         --color-text-header: #003C70;
-         --color-back-btn: #003C70;
+         --color-text-header: #8AC73E;
+         --color-back-btn: #8AC73E;
          --color-front-btn: #fff;
          --color-body: #fff;
       }
@@ -193,16 +122,8 @@ window.addEventListener('DOMContentLoaded', protegerBlcIcones);
       .cs_row_three .course_content{
          border: none;
       }
-
-      .video-img-thumbnail a.video-play{
-         display: none;
-      }
    
       /* Icones dentro de cursos */
-      img.activityicon{
-      background-color: transparent;
-      border-color: transparent;
-   }
       .activityiconcontainer.content .activityicon:not(.nofilter),
       .activityiconcontainer.content .icon:not(.nofilter),
       .activityiconcontainer.assessment .activityicon:not(.nofilter),
@@ -283,7 +204,6 @@ window.addEventListener('DOMContentLoaded', protegerBlcIcones);
    
    table th.header {
          background: var(--color-theme) !important;
-         color: var(--color-front-btn);
       }
    
       a.toggle-category {
@@ -298,15 +218,10 @@ window.addEventListener('DOMContentLoaded', protegerBlcIcones);
    a.toggle-category i {
          color: white !important;
       }
-
-      ul.footer-menu li a, .address-line p {
-    color: black;
-}
    
       /* Notas */
          .path-grade-report-user .user-grade thead th, .grade-report-user .user-grade thead th, .path-calendar .maincalendar .calendarwrapper .calendartable th.header{
             background-color: var(--color-theme);
-            color: var(--color-front-btn);
          }
    
          .path-grade-report-user .user-grade th.category a.toggle-category, .grade-report-user .user-grade th.category a.toggle-category{
@@ -363,9 +278,6 @@ window.addEventListener('DOMContentLoaded', protegerBlcIcones);
          }
       }
       @media(max-width: 900px){
-         .course-description-item.summarytext img{
-            display: none;
-         }
          .stylehome1:before, .mobile-menu .header.stylehome1{
             background-color: var(--color-theme) !important;
          }
@@ -377,14 +289,14 @@ window.addEventListener('DOMContentLoaded', protegerBlcIcones);
          #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
             margin-top: 87px;
             height: calc(100vh - 87px - 71px) !important;
-            background-image: url(https://cdn.krissiesodre.com/moodle/multiplaTesteBackgroundMobile.svg);
+            background-image: url(https://cdn.krissiesodre.com/moodle/locusBackgroundMobile.svg);
             background-position-y: center;
             width: 100vw;
             background-position: center;
          }
 
          body#page-login-index {
-            background-image: url(https://cdn.krissiesodre.com/moodle/multiplaTesteBackgroundTela.svg);
+            background-image: url(https://cdn.krissiesodre.com/moodle/locusBackgroundTela.svg);
          }
 
          .section.our-log.bgc-fa{
@@ -633,7 +545,7 @@ window.addEventListener('DOMContentLoaded', protegerBlcIcones);
       .my_course_content_list .mc_content_list{
          min-width: 100%;
          max-width: 100%;
-      }
+      }      
    }
    </style>
 
@@ -643,93 +555,3 @@ window.addEventListener('DOMContentLoaded', protegerBlcIcones);
          background-color: #343434;
       }
    </style>
-
-<style>
-   img.activityicon{
-      background-color: transparent;
-      border-color: transparent;
-   }
-</style>
-
-<style>
-   a.cardPainel{
-      text-decoration: none;
-      color: black !important;
-      width: calc(25% - 8px);
-      padding: 16px;
-      background: #faf7f7;
-      height: 150px;
-      border: none;
-      border-radius: 16px;
-   }
-   div.flexRow{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      gap: 16px;
-      justify-content: center;
-      align-items: center;
-   }
-
-   div.flexRow.h100{
-      height: 100%;
-   }
-   div.flexColumn{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      justify-content: center;
-      align-items: center;
-   }
-
-   .blcIcone{
-      width: 60%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      color: white;
-      font-size: 38px;
-   }
-
-   .cardPainel span{
-      color: black;
-      font-size: 20px;
-   }
-
-   #page-my-index .card{
-      border: none !important;
-   }
-
-   #page.drawers{
-      overflow-x: hidden;
-   }
-
-   div#page-footer-frontpage {
-    position: relative;
-    left: -3rem;
-    width: 100vw;
-}
-
-   @media(max-width: 900px){
-      
-      div.flexRow{
-         flex-direction: column;
-      }
-
-      a.cardPainel{
-         width: 100%;
-      }
-
-      .blcIcone{
-         width: 100%;
-      }
-
-      div#page-footer-frontpage{
-         left: 0;
-      }
-   }
-
-</style>

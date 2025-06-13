@@ -1,13 +1,39 @@
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-    </div>
-</div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  // Verifica se a URL contém "onilearning.com.br"
+  if (window.location.href.includes("onilearning.com.br")) {
+    // Cria os scripts do Hand Talk
+    var handtalkScript = document.createElement("script");
+    handtalkScript.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js";
+    handtalkScript.onload = function () {
+      new HT({
+        token: "158a35ee8ca66e34978aa26376e3f675",
+      });
+    };
+    document.head.appendChild(handtalkScript);
+    console.log("Hand Talk carregado com sucesso.");
+  } else {
+    // Adiciona o HTML do VLibras
+    document.write(`
+      <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+          </div>
+      </div>
+    `);
+
+    
+    // Cria o script do VLibras
+    var vlibrasScript = document.createElement("script");
+    vlibrasScript.src = "https://vlibras.gov.br/app/vlibras-plugin.js";
+    vlibrasScript.onload = function () {
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    };
+    document.head.appendChild(vlibrasScript);
+    console.log("Vlibras carregado com sucesso.");
+  }
 </script>
+
 <script>
     $(document).ready(function(){
         $(".activity.presentation .activity-instance").find("img").attr("src", "https://cdn.krissiesodre.com/moodle/icones/apresentacao.svg");
@@ -27,13 +53,15 @@
 </script>
 
 <script>
-    $(document).ready(function () {
-  if ($("body").attr("id") === "page-course-view-cards") {
+  $(document).ready(function () {
+  if ($("body").attr("id") === "page-course-view-topics") {
     $(".activitytitle").each(function () {
-      const $activity = $(this);
+      const $activity = $(this).closest(".activity");
       const $img = $activity.find(".activityiconcontainer img");
       const $instancename = $activity.find(".instancename").first();
-      const texto = $instancename.clone().children().remove().end().text().trim(); // remove span.accesshide
+      const texto = $instancename.clone().children().remove().end().text().trim();
+
+      console.log("Texto detectado:", texto); // debug
 
       if (texto === "Conteúdo") {
         $img.attr("src", "https://cdn.krissiesodre.com/moodle/icones/trilha.svg");
@@ -44,24 +72,51 @@
   }
 });
 
+</script>
+<script>
+function atualizarPorcentagens() {
+    if (document.body.id === "page-course-view-cards") {
+        console.log("Página do Curso acessada");
 
-$(document).ready(function () {
-    if ($("body").attr("id") === "page-course-view-cards") {
-  $('.section-completion').each(function () {
-    const $div = $(this);
-    const nodes = $div.contents();
+        const cards = document.querySelectorAll('.bg-secondary.small.text-body.section-completion');
 
-    nodes.each(function () {
-      if (this.nodeType === 3 && this.nodeValue.includes('{$a->porcentagem}%')) {
-        // Empacota o texto em um <span> e aplica cor transparente
-        const $span = $('<span>').text(this.nodeValue).css('color', 'transparent');
-        $(this).replaceWith($span);
-      }
-    });
-  });
+        cards.forEach(section => {
+            const innerCircle = section.querySelector('circle.inner');
+            let value;
+
+            if (innerCircle) {
+                const dashOffset = parseFloat(innerCircle.getAttribute('stroke-dashoffset'));
+                if (!isNaN(dashOffset)) {
+                    value = Math.round(Math.abs(100 - dashOffset));
+                    console.log(`Valor calculado: ${value}%`);
+                }
+            }
+
+            // Se não houver innerCircle, considera 0%
+            if (value === undefined) {
+                value = 0;
+                console.warn("innerCircle ausente — valor assumido: 0%");
+            }
+
+            // Atualiza todos os TextNodes com '{$a->porcentagem}'
+            section.childNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('{$a->porcentagem}')) {
+                    node.textContent = `${value}%`;
+                }
+            });
+        });
+    }
 }
-});
+// Espera os cards carregarem
+const interval = setInterval(() => {
+    const ready = document.querySelectorAll('.bg-secondary.small.text-body.section-completion').length > 0;
+    const preloader = document.querySelector('.preloader.ccn_preloader_load');
 
+    if (ready && preloader && getComputedStyle(preloader).display === 'none') {
+        clearInterval(interval);
+        atualizarPorcentagens();
+    }
+}, 300);
 </script>
 
 <script>
@@ -165,4 +220,17 @@ function alterarPlaceholder() {
     }
 }
 alterarPlaceholder(); 
+</script>
+<script>
+function importarPhosphorIcons() {
+  const style = document.createElement("style");
+  style.textContent = `
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
+  `;
+  document.head.appendChild(style);
+}
+importarPhosphorIcons();
 </script>
