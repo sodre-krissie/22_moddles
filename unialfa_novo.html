@@ -1,0 +1,767 @@
+<script>
+function importarPhosphorIcons() {
+  const style = document.createElement("style");
+  style.textContent = `
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
+  `;
+  document.head.appendChild(style);
+}
+importarPhosphorIcons();
+
+function protegerBlcIcones() {
+  const iconesOriginais = {
+    "Meus Cursos": { icon: "ph-book-open-text", bg: "#FFCC00" },
+    "Biblioteca": { icon: "ph-book", bg: "#FF6900" },
+    "Calendário": { icon: "ph-calendar-blank", bg: "#34529A" },
+    "Notas": { icon: "ph-exam", bg: "#003C70" },
+  };
+
+  function restaurarIcones() {
+    document.querySelectorAll('.cardPainel').forEach(card => {
+      const label = card.querySelector('span')?.textContent?.trim();
+      const iconeData = iconesOriginais[label];
+
+      if (iconeData) {
+        const blcIcone = card.querySelector('.blcIcone');
+        if (blcIcone) {
+          const atualIcone = blcIcone.querySelector('i');
+          const correto = `<i class="ph ${iconeData.icon}" tabindex="-1"></i>`;
+          const precisaAtualizar = !atualIcone || atualIcone.className !== `ph ${iconeData.icon}`;
+
+          if (precisaAtualizar) {
+            blcIcone.innerHTML = correto;
+            blcIcone.style.backgroundColor = iconeData.bg;
+          }
+        }
+      }
+    });
+  }
+
+  // Restaura inicialmente
+  restaurarIcones();
+
+  // Observa mudanças no body
+  const observer = new MutationObserver(() => {
+    restaurarIcones();
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
+// Ativar ao carregar a página
+window.addEventListener('DOMContentLoaded', protegerBlcIcones);
+
+</script>
+
+<!-- Imagem Pagina Inicial deslogada -->
+<style>
+   .pagelayout-login #page{
+      background-image: url(https://cdn.krissiesodre.com/moodle/uniAlfa2BackgroundTela.svg) !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+   }
+
+   .login-container{
+      padding: 24px;
+   }
+
+   button#loginbtn {
+      width: 100%;
+   }
+   #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v, .path-login .inner_page_breadcrumb {
+      margin-top: 87px;
+      height: calc(100vw* 0.48) !important; 
+      background-image: url(https://cdn.krissiesodre.com/moodle/uniAlfa2Background.svg);
+   }
+
+   #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v, .login-bg, .sign_up_modal:before {
+      background-image: url(https://cdn.krissiesodre.com/moodle/uniAlfa2BackgroundTela.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+
+   #page-login-index .inner_page_breadcrumb:before{
+      background-image: none;
+   }
+
+   #page-login-index .inner_page_breadcrumb .container {
+      display: none;
+   }
+
+   .modal-content{
+      border: none;
+   }
+
+   div#exampleModalCenter {
+      margin: 0;
+      padding: 0;
+   }
+
+   .modal.show .modal-dialog {
+      transform: none;
+      margin-left: 60%;
+   }
+
+   </style>
+   
+   
+   <!-- Importação de ícones -->
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+   <!-- Root -->
+   <style>
+      :root{
+         --color-theme: #E0321A;
+         --color-header: #fff;
+         --color-text-header: #E0321A;
+         --color-back-btn: #E0321A;
+         --color-front-btn: #fff;
+         --color-body: #fff;
+      }
+
+      @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
+      @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
+      @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
+      @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
+   </style>
+   <!-- Style Desktop -->
+   <style>
+      /* Ícones do Painel */
+      .ff_icon .ph-fill {
+         font-size: 54px;
+         color: #FFF;
+      }
+   
+      /* Ícones da barra usuário */
+      .header_user_notif i.ph {
+         font-size: 20px;
+         position: relative;
+         top: 12%;
+         color: var(--color-header) !important;
+      }
+   
+      /* Icone de Idioma */
+      li.user_setting.ccn-settings-nav.ccn-lang-menu {
+         display: none;
+      }
+   
+      /* Ícone de settings no menu aluno */
+      nav.list-group a[data-key="sitesettings"]{
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         gap: 16px;
+      }
+   
+      /* Header */
+      a.navbar_brand span{
+         display: none !important;
+      }
+   
+      header.header-nav.menu_style_home_one.stricky-fixed .ace-responsive-menu li a, header.header-nav.menu_style_home_one .ace-responsive-menu li a, nav.navbar nav.moremenu a.nav-link.active{
+         color: var(--color-text-header) !important;
+      }
+   
+      /* Banner */
+      body#page-my-index .our-dashbord .row .col-lg-12:has(nav.breadcrumb_widgets){
+         display: none;
+      }
+
+      #page-site-index .container.ccn_breadcrumb_widgets.clearfix {
+         display: none;
+      }
+   
+      .ccnBlockContent.ccnDashBlCt {
+         padding: 0;
+      }
+   
+      .block.ccnDashBl {
+         background: transparent;
+         box-shadow: none;
+      }
+
+      #page-course-view-topics #ccn-main-region{
+         padding-top: 0;
+      }
+
+      #page-course-view-topics #page-heading-button, #page-my-index #page-heading-button, #page-my-index .primary-navigation{
+         display: none;
+      }
+      .cs_row_three .course_content{
+         border: none;
+      }
+
+      .video-img-thumbnail a.video-play{
+         display: none;
+      }
+   
+      /* Icones dentro de cursos */
+      img.activityicon{
+      background-color: transparent;
+      border-color: transparent;
+   }
+      .activityiconcontainer.content .activityicon:not(.nofilter),
+      .activityiconcontainer.content .icon:not(.nofilter),
+      .activityiconcontainer.assessment .activityicon:not(.nofilter),
+      .activityiconcontainer.assessment .icon:not(.nofilter), .activityiconcontainer.collaboration .activityicon:not(.nofilter), .activityiconcontainer.collaboration .icon:not(.nofilter), .activityiconcontainer .activityicon, .activityiconcontainer .icon {
+         filter: none;
+         height: 50px;
+         width: 50px;
+         max-width: none;
+      }
+   
+      .activityiconcontainer.content,
+      .activityiconcontainer.assessment, .activityiconcontainer.collaboration {
+         background-color: transparent;
+      }
+   
+      /* Card do Curso */
+      .my_course_content_list .mc_content_list .thumb .overlay ul {
+         top: 0;
+         height: 100%;
+      }
+   
+      .my_course_content_list .mc_content_list .thumb .overlay ul li {
+         width: 100%;
+         height: 100%;
+         border-radius: 0;
+         border-color: transparent;
+      }
+   
+      .my_course_content_list .mc_content_list .thumb .overlay ul li a {
+         font-size: 16px;
+         height: 100%;
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+   
+      /* Página deslogada */
+      header.ccnHeader1.header-nav.menu_style_home_one.navbar-scrolltofixed.stricky.main-menu.scroll-to-fixed-fixed {
+         background: var(--color-header);
+         border-bottom: none !important;
+      }
+   
+      body.pagelayout-frontpage.notloggedin .inner_page_breadcrumb:before{
+         background-image: none;
+      }
+   
+      body.pagelayout-frontpage.notloggedin section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v .container {
+         display: none;
+      }
+   
+      ul.sign_up_btn a.flaticon-user, span#search-button i {
+         color: var(--color-text-header) !important;
+      }
+   
+      /* Página logada */
+      #page-site-index.pagelayout-frontpage .inner_page_breadcrumb:before{
+         background-image: none;
+      }
+   
+      #page-site-index.pagelayout-frontpage .inner_page_breadcrumb .breadcrumb_content h4, #page-site-index.pagelayout-frontpage .inner_page_breadcrumb ol.breadcrumb{
+         display: none;
+      }
+   
+      .inner_page_breadcrumb .breadcrumb_title{
+         text-align: center;
+         margin-bottom: 16px;
+      }
+
+      body:not(.ccn_header_style_7) .navbar_brand img, .ccn_header_style_2 .logo-widget img {
+         /*max-width: 100%;*/
+         max-height: 45px;
+      }
+   
+      /* Footer */
+      section.footer_middle_area.p0, section.footer_one {
+         display: none;
+      }
+   
+   table th.header {
+         background: var(--color-theme) !important;
+         color: var(--color-front-btn);
+      }
+   
+      a.toggle-category {
+         background: var(--color-theme) !important;
+         border: none;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   
+   a.toggle-category i {
+         color: white !important;
+      }
+
+      ul.footer-menu li a, .address-line p {
+    color: black;
+}
+   
+      /* Notas */
+         .path-grade-report-user .user-grade thead th, .grade-report-user .user-grade thead th, .path-calendar .maincalendar .calendarwrapper .calendartable th.header{
+            background-color: var(--color-theme);
+            color: var(--color-front-btn);
+         }
+   
+         .path-grade-report-user .user-grade th.category a.toggle-category, .grade-report-user .user-grade th.category a.toggle-category{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--color-theme);
+            border: none;
+         }
+   
+         td.level1.d1.b1t.b2b.b1l.cell.c0.lastcol, .path-grade-report-user .user-grade th.category, .grade-report-user .user-grade th.category {
+            border: none !important;
+         }
+   
+         .grade-report-user .user-grade .baggt{
+            background-color: #fff;
+         }
+
+      /* Calendario */
+      .maincalendar .calendarmonth td.today .day-number-circle {
+         background-color: var(--color-back-btn);
+      }
+
+      .maincalendar .calendarmonth td .day-number-circle {
+         display: flex     ;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .modal.show .modal-dialog {
+      margin-left: 6%;
+   }
+
+      .mobile{
+         display: none !important;
+      }
+
+      .desktop{
+         display: inline-block !important;
+      }
+
+      header.header-nav.menu_style_home_one .ace-responsive-menu li ul.sub-menu li, header.header-nav.home2.style_one .ace-responsive-menu li ul.sub-menu li, header.header-nav.menu_style_home_three .ace-responsive-menu li ul.sub-menu li, header.header-nav.menu_style_home_four .ace-responsive-menu li ul.sub-menu li, header.header-nav.menu_style_home_five .ace-responsive-menu li ul.sub-menu li, header.header-nav.menu_style_home_six .ace-responsive-menu li ul.sub-menu li, header.header-nav.menu_style_home_seven .ace-responsive-menu li ul.sub-menu li, header.header-nav.menu_style_home_eight .ace-responsive-menu li ul.sub-menu li{
+         width: 100%;
+      }
+   
+   </style>
+   
+   <!-- Style Mobile -->
+   <style>
+      @media(max-width: 1200px){
+         .stylehome1:before, .mobile-menu .header.stylehome1{
+            background-color: var(--color-theme) !important;
+         }
+         
+         /* Header */
+         a.navbar_brand span{
+            display: none !important;
+         }
+      }
+      @media(max-width: 900px){
+         .course-description-item.summarytext img{
+            display: none;
+         }
+         .stylehome1:before, .mobile-menu .header.stylehome1{
+            background-color: var(--color-theme) !important;
+         }
+
+         #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v, .login-bg, .sign_up_modal:before{
+            margin-top: 95px;
+         }
+
+         #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
+            margin-top: 87px;
+            height: calc(100vh - 87px - 71px) !important;
+            background-image: url(https://cdn.krissiesodre.com/moodle/uniAlfa2BackgroundMobile.svg);
+            background-position-y: center;
+            width: 100vw;
+            background-position: center;
+         }
+
+         body#page-login-index {
+            background-image: url(https://cdn.krissiesodre.com/moodle/uniAlfa2BackgroundTela.svg);
+         }
+
+         .section.our-log.bgc-fa{
+            padding: 10% 5% !important;
+         }
+
+         section.footer_bottom_area.pt25.pb25 {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+         }
+
+         .my_course_content_header .d-flex.align-items-center {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 16px;
+         }
+   
+         .dropdown {
+            width: 100%;
+         }
+   
+         .dropdown button {
+            width: 100%;
+         }
+   
+         .my_course_content_header .mr-2.flex-grow-1 {
+            width: 100%;
+         }
+   
+         .cs_row_three .course_content {
+            padding: 0;
+         }
+   
+         .ccn_coursecat_action_btns {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+         }
+   
+         #ccn-main-region {
+            padding-top: 4px;
+         }
+   
+         .activityname a {
+            font-size: 18px;
+            word-break: break-word;
+         }
+   
+         li.list-inline-item {
+            font-size: 18px;
+         }
+   
+         li.nav-item a {
+            font-size: 16px;
+         }
+   
+         .ccn_col_tree {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+         }
+   
+         .card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 16px;
+         }
+   
+         .breadcrumb_widgets {
+            margin-top: 48px;
+         }
+   
+         .section .activity.modtype_label.label .contentwithoutlink {
+            min-height: 0;
+            margin: 0;
+            padding: 0;
+         }
+   
+         li.ccn_mob_menu_iconed.mm-listitem {
+            display: none;
+         }
+   
+         .mm-page>.wrapper {
+            height: 100% !important;
+         }
+   
+         .main_logo_home2 .mobileBrand{
+            display: none;
+         }
+   
+         a.dropdown-toggle.active {
+            background: var(--color-back-btn) !important;
+            color: var(--color-front-btn) !important;
+         }
+   
+         /* Barra de progresso */
+         .ccn_mc_progress {
+            max-width: 100%;
+            margin: 5px;
+            display: inline-block;
+            min-width: 200px;
+            width: calc(100% - 20px);
+         }
+   
+         /* Area do perfil */
+         #page-user-profile .instructor_thumb.text-center img {
+            height: 70px;
+            width: 70px;
+            margin-top: 82px;     
+         }
+         .inner_page_breadcrumb{
+            height: auto !important;
+         }
+   
+         .inner_page_breadcrumb .breadcrumb_title{
+            font-size: 24px;
+            text-align: center;
+         }
+   
+         #page-heading-button {
+            position: relative;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+         }
+   
+         .singlebutton+.singlebutton {
+            margin-left: 0;
+         }
+   
+         .singlebutton button {
+            width: 100%;
+         }
+
+         .desktop{
+            display: none !important;
+         }
+
+         .mobile{
+            display: inline-block !important;
+         }
+      }
+   </style>
+   
+
+   <style>
+   /* Meus Cursos em cards */
+   .my_course_content_list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+
+   .my_course_content_list .mc_content_list{
+      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 25%;
+      max-width: 25%;
+   }
+
+   .ccn_mc_content_header_details{
+      width: 100%;
+   }
+
+   .thumb{
+      width: 100% !important;
+      padding: 0;
+      margin: 0 !important;
+   }
+
+   .thumb img.img-whp{
+      object-fit: cover !important;
+   }
+
+   .details{
+      padding: 8px 16px;
+      width: 100%;
+   }
+
+   .ccn_mc_progress {
+      max-width: 100%;
+      margin: 8px 0;
+      display: inline-block;
+      min-width: 100%;
+   }
+
+   /* breadcrumb tela do curso */
+   .inner_page_breadcrumb{
+      height: 180px;
+      margin-top: 80px;
+   }
+   
+   .inner_page_breadcrumb:before{
+      background-image: -webkit-linear-gradient(135deg, var(--color-theme) 0%, var(--color-theme) 100%);
+   }
+   
+   .inner_page_breadcrumb .breadcrumb_content {
+      margin-top: 0;
+   }
+
+   .mobile-menu .header.stylehome1 a:not(.mobileBrand):not(.ccn-btn-backtocourse){
+      color: var(--color-theme);
+   }
+
+   .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger):before, .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger) span{
+      background: var(--color-front-btn);
+   }
+
+   @media(max-width: 1200px){
+      .my_course_content_list .mc_content_list{
+         min-width: 50%;
+         max-width: 50%;
+         border-top: 1px solid #CECECE;
+      }
+
+      .my_course_content_list .mc_content_list:first-child{
+         border-top: none;
+      }
+
+      .my_course_content_list .mc_content_list:last-child {
+         border-bottom: none;
+      }
+      
+      .my_course_content .ccn-pagination{
+         border-top: none;
+      }
+
+      .thumb{
+         min-height: 150px;
+         max-height: 174px !important;
+      }
+
+      .dashboard_main_content .my_course_content_list .mc_content_list .mc_content {
+         overflow: hidden;
+         min-height: 100%;
+      }
+   }
+
+   @media(max-width: 900px){
+      .my_course_content_list .mc_content_list{
+         min-width: 100%;
+         max-width: 100%;
+      }
+   }
+   </style>
+
+   <!-- Style Dark Mode -->
+   <style>
+      body.ccn_context_dashboard.ccnDarkMode.ccn_context_dashboard, .ccnDarkMode.ccn_context_dashboard header.header-nav.menu_style_home_one.dashbord_pages, .ccnDarkMode.ccn_context_dashboard .our-dashbord, .ccnDarkMode.ccn_context_dashboard .dashboard_sidebar:before, .ccnDarkMode.ccn_context_dashboard#page-my-index, .ccnDarkMode.ccn_context_dashboard .message_container .iu_heading .candidate_revew_search_box input.form-control, .ccnDarkMode.ccn_context_dashboard .message_container .message_input input.form-control, .ccnDarkMode.ccn_context_dashboard .message_container .message_input textarea.form-control, .ccnDarkMode.ccn_context_dashboard .modal-content, .ccnDarkMode.ccn_context_dashboard .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content, .ccnDarkMode.ccn_context_dashboard #plugins-check-page .pluginupdateinfo, .ccnDarkMode.ccn_context_dashboard #plugins-control-panel .pluginupdateinfo, .ccnDarkMode.ccn_context_dashboard#plugins-check-page .pluginupdateinfo, .ccnDarkMode.ccn_context_dashboard#plugins-control-panel .pluginupdateinfo, .ccnDarkMode.ccn_context_dashboard .preloader, .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton, .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight, .ccnDarkMode.ccn_context_dashboard.path-mod-quiz #mod_quiz_navblock .qnbutton.invalidanswer .trafficlight, .ccnDarkMode.ccn_context_dashboard .message_container .message_input{
+         background-color: #343434;
+      }
+   </style>
+
+<style>
+   img.activityicon{
+      background-color: transparent;
+      border-color: transparent;
+   }
+</style>
+
+<style>
+   a.cardPainel{
+      text-decoration: none;
+      color: black !important;
+      width: calc(25% - 8px);
+      padding: 16px;
+      background: #faf7f7;
+      height: 150px;
+      border: none;
+      border-radius: 16px;
+   }
+   div.flexRow{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   div.flexRow.h100{
+      height: 100%;
+   }
+   div.flexColumn{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .blcIcone{
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      color: white;
+      font-size: 38px;
+   }
+
+   .cardPainel span{
+      color: black;
+      font-size: 20px;
+   }
+
+   #page-my-index .card{
+      border: none !important;
+   }
+
+   #page.drawers{
+      overflow-x: hidden;
+   }
+
+   div#page-footer-frontpage {
+    position: relative;
+    left: -3rem;
+    width: 100vw;
+}
+
+   @media(max-width: 900px){
+      
+      div.flexRow{
+         flex-direction: column;
+      }
+
+      a.cardPainel{
+         width: 100%;
+      }
+
+      .blcIcone{
+         width: 100%;
+      }
+
+      div#page-footer-frontpage{
+         left: 0;
+      }
+   }
+
+</style>
+
+<style>
+   header.main-menu{
+      z-index: 9999;
+   }
+   /*Filtro de usuários */
+   .filters-dropdown.dropdown-menu.dropdown-menu-right.moodle-has-zindex.show{
+      height: 300px;
+   }
+
+   div#filters {
+      height: 100%;
+      z-index: 9;
+   }
+
+   body:not(.ccn_header_style_7) .navbar_brand img, .ccn_header_style_2 .logo-widget img{
+      max-height: 40px;
+   }
+
+   @media(max-width: 1200px){
+      .container.ccn_breadcrumb_widgets.clearfix {
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+      }
+   }
+</style>

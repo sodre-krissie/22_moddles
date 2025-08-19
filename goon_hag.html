@@ -59,7 +59,7 @@
 <!-- Imagem Pagina Inicial deslogada -->
 <style>
    .pagelayout-login #page {
-      background-image: url(https://unitreands.onilearning.com.br/pluginfile.php/9534/block_cocoon_slider_1/slides/1/backgroundLogin.png) !important;
+      background-image: url(https://cdn.krissiesodre.com/moodle/hagBackgroundTela.svg) !important;
       background-size: cover !important;
       background-repeat: no-repeat !important;
    }
@@ -76,13 +76,13 @@
    .path-login .inner_page_breadcrumb {
       margin-top: 87px;
       height: calc(100vw* 0.48) !important;
-      background-image: url(https://unitreands.onilearning.com.br/pluginfile.php/9534/block_cocoon_slider_1/slides/1/backgroundLogin.png);
+      background-image: url(https://cdn.krissiesodre.com/moodle/hagBackground.svg);
    }
 
    #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v,
    .login-bg,
    .sign_up_modal:before {
-      background-image: url(https://unitreands.onilearning.com.br/pluginfile.php/9534/block_cocoon_slider_1/slides/1/backgroundLogin.png);
+      background-image: url(https://cdn.krissiesodre.com/moodle/hagBackgroundTela.svg);
       background-repeat: no-repeat;
       background-size: cover;
    }
@@ -117,12 +117,12 @@
 <!-- Root -->
 <style>
    :root {
-      --color-theme: #1E335B;
-      --color-header: #1E335B;
+      --color-theme: #013DEC;
+      --color-header: #fff;
       --color-text-header: #fff;
-      --color-back-btn: #003d6e;
+      --color-back-btn: #013DEC;
       --color-front-btn: #fff;
-      --color-body: #003d6e;
+      --color-body: #fff;
    }
 
    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
@@ -143,7 +143,7 @@
       font-size: 20px;
       position: relative;
       top: 12%;
-      color: var(--color-header) !important;
+      color: var(--color-theme) !important;
    }
 
    /* Icone de Idioma */
@@ -256,7 +256,7 @@
 
    /* Página deslogada */
    header.ccnHeader1.header-nav.menu_style_home_one.navbar-scrolltofixed.stricky.main-menu.scroll-to-fixed-fixed {
-      background: var(--color-header);
+      background: var(--color-theme);
       border-bottom: none !important;
    }
 
@@ -387,6 +387,15 @@
    header.header-nav.menu_style_home_eight .ace-responsive-menu li ul.sub-menu li {
       width: 100%;
    }
+
+   header.header-nav.menu_style_home_one a.navbar_brand{
+      margin-top: 20px;
+   }
+
+   body:not(.ccn_header_style_7) .navbar_brand img{
+      max-width: 100%;
+      max-height: 45px;
+   }
 </style>
 
 <!-- Style Mobile -->
@@ -395,7 +404,7 @@
 
       .stylehome1:before,
       .mobile-menu .header.stylehome1 {
-         background-color: var(--color-header) !important;
+         background-color: var(--color-theme) !important;
       }
 
       /* Header */
@@ -411,7 +420,7 @@
 
       .stylehome1:before,
       .mobile-menu .header.stylehome1 {
-         background-color: var(--color-header) !important;
+         background-color: var(--color-theme) !important;
       }
 
       #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v,
@@ -423,14 +432,14 @@
       #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
          margin-top: 87px;
          height: calc(100vh - 87px - 71px) !important;
-         /*background-image: url(https://cdn.krissiesodre.com/moodle/educandosBackgroundMobile.png);*/
+         background-image: url(https://cdn.krissiesodre.com/moodle/hagBackgroundMobile.svg);
          background-position-y: center;
          width: 100vw;
          background-position: center;
       }
 
       body#page-login-index {
-         background-image: url(https://unitreands.onilearning.com.br/pluginfile.php/9534/block_cocoon_slider_1/slides/1/backgroundLogin.png);
+         background-image: url(https://cdn.krissiesodre.com/moodle/hagBackgroundTela.svg);
       }
 
       .section.our-log.bgc-fa {
@@ -525,7 +534,7 @@
       }
 
       a.dropdown-toggle.active {
-         background: var(--color-back-btn) !important;
+         background: var(--color-front-btn) !important;
          color: var(--color-front-btn) !important;
       }
 
@@ -648,11 +657,11 @@
 
    .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger):before,
    .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger) span {
-      background: var(--color-back-btn);
+      background: var(--color-front-btn);
    }
 
    #page-site-index .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger) span {
-      background: var(--color-back-btn);
+      background: var(--color-front-btn);
    }
 
    @media(max-width: 1200px) {
