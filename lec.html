@@ -1,30 +1,3 @@
-<style>
-   :root{
-      /*Variáveis de Cores*/
-      --color-theme: #013DEC;
-      --color-text-header: #fff;
-      --color-back-btn: #013DEC;
-      --color-front-btn: #fff;
-
-      /* Variáveis de Imagem */
-      /* Página Inicial - Desktop */
-      --tela-principal: url(https://cdn.krissiesodre.com/moodle/hagBackground.svg);
-
-      /* Página Inicial - Mobile */
-      --tela-principalMobile: url(https://cdn.krissiesodre.com/moodle/hagBackgroundMobile.svg);
-
-      /* Tela de Login */
-      --tela-Login: url(https://cdn.krissiesodre.com/moodle/hagBackgroundTela.svg);
-
-      
-   }
-   /* Ocultar botões de edição */
-   #page-course-view-topics #page-heading-button,
-   #page-my-index #page-heading-button,
-   #page-my-index .primary-navigation {
-      display: none;
-   }
-</style>
 <script>
    function importarPhosphorIcons() {
       const style = document.createElement("style");
@@ -86,7 +59,7 @@
 <!-- Imagem Pagina Inicial deslogada -->
 <style>
    .pagelayout-login #page {
-      background-image: var(--tela-Login) !important;
+      background-image: url(https://cdn.krissiesodre.com/moodle/lecBackgroundTela.svg) !important;
       background-size: cover !important;
       background-repeat: no-repeat !important;
    }
@@ -103,13 +76,13 @@
    .path-login .inner_page_breadcrumb {
       margin-top: 87px;
       height: calc(100vw* 0.48) !important;
-      background-image: var(--tela-principal);
+      background-image: url(https://cdn.krissiesodre.com/moodle/lecBackground.svg);
    }
 
    #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v,
    .login-bg,
    .sign_up_modal:before {
-      background-image: var(--tela-Login);
+      background-image: url(https://cdn.krissiesodre.com/moodle/lecBackgroundTela.svg);
       background-repeat: no-repeat;
       background-size: cover;
    }
@@ -143,6 +116,15 @@
 
 <!-- Root -->
 <style>
+   :root {
+      --color-theme: #EC6608;
+      --color-header: #fff;
+      --color-text-header: #EC6608;
+      --color-back-btn: #EC6608;
+      --color-front-btn: #fff;
+      --color-body: #fff;
+   }
+
    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
@@ -161,7 +143,7 @@
       font-size: 20px;
       position: relative;
       top: 12%;
-      color: var(--color-theme) !important;
+      color: var(--color-header) !important;
    }
 
    /* Icone de Idioma */
@@ -208,6 +190,12 @@
 
    #page-course-view-topics #ccn-main-region {
       padding-top: 0;
+   }
+
+   #page-course-view-topics #page-heading-button,
+   #page-my-index #page-heading-button,
+   #page-my-index .primary-navigation {
+      display: none;
    }
 
    .cs_row_three .course_content {
@@ -266,21 +254,9 @@
       justify-content: center;
    }
 
-   .top_courses .thumb:before{
-      background-color: rgba(0,0,0,0) !important;
-   }
-
-   .top_courses .thumb .overlay .tc_preview_course {
-      height: fit-content;
-      width: fit-content;
-      background: var(--color-theme);
-      padding: 4px 8px;
-      border-radius: 4px;
-   }
-
    /* Página deslogada */
    header.ccnHeader1.header-nav.menu_style_home_one.navbar-scrolltofixed.stricky.main-menu.scroll-to-fixed-fixed {
-      background: var(--color-theme);
+      background: var(--color-header);
       border-bottom: none !important;
    }
 
@@ -428,7 +404,7 @@
 
       .stylehome1:before,
       .mobile-menu .header.stylehome1 {
-         background-color: var(--color-theme) !important;
+         background-color: var(--color-header) !important;
       }
 
       /* Header */
@@ -444,7 +420,7 @@
 
       .stylehome1:before,
       .mobile-menu .header.stylehome1 {
-         background-color: var(--color-theme) !important;
+         background-color: var(--color-header) !important;
       }
 
       #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v,
@@ -456,14 +432,14 @@
       #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
          margin-top: 87px;
          height: calc(100vh - 87px - 71px) !important;
-         background-image: var(--tela-principalMobile);
+         background-image: url(https://cdn.krissiesodre.com/moodle/lecBackgroundMobile.svg);
          background-position-y: center;
          width: 100vw;
          background-position: center;
       }
 
       body#page-login-index {
-         background-image: var(--tela-Login);
+         background-image: url(https://cdn.krissiesodre.com/moodle/lecBackgroundTela.svg);
       }
 
       .section.our-log.bgc-fa {
@@ -676,16 +652,16 @@
    }
 
    .mobile-menu .header.stylehome1 a:not(.mobileBrand):not(.ccn-btn-backtocourse) {
-      color: var(--color-theme);
+      color: var(--color-text-header);
    }
 
    .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger):before,
    .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger) span {
-      background: var(--color-front-btn);
+      background: var(--color-text-header);
    }
 
    #page-site-index .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger) span {
-      background: var(--color-front-btn);
+      background: var(--color-text-header);
    }
 
    @media(max-width: 1200px) {
@@ -715,6 +691,12 @@
       .dashboard_main_content .my_course_content_list .mc_content_list .mc_content {
          overflow: hidden;
          min-height: 100%;
+      }
+
+      .dashbord .ccn_breadcrumb_widgets.container {
+         gap: 16px;
+         display: flex;
+         flex-direction: column;
       }
    }
 

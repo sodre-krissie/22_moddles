@@ -1,0 +1,236 @@
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+<style>
+   /* Container principal */
+.suporte-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  font-family: Calibri, Arial, sans-serif;
+}
+
+/* Card */
+.suporte-card {
+  border: 2px solid#90C;
+  border-radius: 16px;
+  padding: 18px;
+  background-color: #f9f9f9;
+   max-width: calc(100% / 4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.suporte-card p{
+   margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* Foto */
+.suporte-foto {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #90C;
+}
+
+/* Título */
+.suporte-titulo {
+  color: #90C;
+}
+
+/* Texto de apresentação */
+.suporte-apresentacao {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Destaque no texto */
+.suporte-destaque {
+  color: #90C;
+  font-weight: bold;
+}
+
+/* Texto adicional */
+.suporte-descricao {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Área dos botões */
+.suporte-botoes {
+      display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* Botões padrão */
+.suporte-botoes a {
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Botão LinkedIn */
+.btn-linkedin {
+  background-color: #00529B;
+  color: #fff;
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #fff;
+}
+
+.activity-item:has(.suporte-container){
+   border-color: transparent !important;
+}
+
+.section .label .contentwithoutlink, .section .label .activityinstance:has(.suporte-container){
+   padding-right: 0;
+}
+
+@media (max-width: 900px) {
+  .suporte-container {
+    flex-direction: column;
+  }
+
+  .suporte-card {
+    max-width: 100%;
+  }
+}
+
+
+</style>
+<div class="suporte-container">
+
+  <div class="suporte-card">
+    <!-- Foto de perfil -->
+    <img 
+      src="https://media.licdn.com/dms/image/v2/D4D35AQFl_xXE3NL_Ww/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1727778844034?e=1758902400&v=beta&t=ILubydATKQylzJN8NGfYzsdInoakirZwpgf5x225Ic0" 
+      alt="Foto de André Fonseca" 
+      class="suporte-foto">
+
+    <h2 class="suporte-titulo">Professor do Curso</h2>
+
+    <p class="suporte-apresentacao">
+      Olá! Eu sou <strong>André Fonseca</strong>, professor do módulo de 
+      <span class="suporte-destaque">Inteligência Artificial Aplicada a Negócios</span>.
+      Tenho experiência em Ciência de Dados, Machine Learning e Engenharia de Prompt, 
+    trazendo aplicações práticas de IA para o ambiente corporativo.
+    </p>
+
+    <p class="suporte-descricao">
+      Você pode acompanhar mais sobre meu trabalho e publicações no LinkedIn:
+    </p>
+
+    <div class="suporte-botoes">
+      <a href="https://www.linkedin.com/in/andr%C3%A9-filipe-afonso-de-sousa-fonseca-1790b0273" target="_blank" class="btn-linkedin">
+        <i class="ph-fill ph-linkedin-logo"></i> Meu LinkedIn
+      </a>
+      
+    </div>
+  </div>
+
+  <div class="suporte-card">
+    <!-- Foto de perfil -->
+    <img 
+      src="https://cdn.krissiesodre.com/moodle/David.jpg" 
+      alt="Foto de David Stephen" 
+      class="suporte-foto">
+
+    <h2 class="suporte-titulo">Coordenador do Curso</h2>
+
+    <p class="suporte-apresentacao">
+      Olá! Eu sou <strong>David Stephen</strong>, coordenador do curso.  
+    Estou à disposição para <span class="suporte-destaque">apoiar você em questões acadêmicas e orientações</span> relacionadas ao andamento do MBA.
+    </p>
+
+    <p class="suporte-descricao">
+          Sempre que precisar, pode falar comigo diretamente pelos canais abaixo:
+
+    </p>
+
+    <div class="suporte-botoes">
+      <a href="https://www.linkedin.com/in/david-stephen-396b0725" target="_blank" class="btn-linkedin">
+        <i class="ph-fill ph-linkedin-logo"></i> LinkedIn
+      </a>
+      
+      <a href="https://wa.me/5541997395173" target="_blank" class="btn-whatsapp">
+        <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="suporte-card">
+    <!-- Foto de perfil -->
+    <img 
+      src="https://media.licdn.com/dms/image/v2/D4D03AQEm-CmaaZ4jCw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1682523445730?e=1761177600&v=beta&t=d00QcPyJg6BEqYcQW3kXQYARGuccDuNmXg93gQxGdAg" 
+      alt="Foto de Paulo Afonso Arruda" 
+      class="suporte-foto">
+
+    <h2 class="suporte-titulo">Suporte da Plataforma</h2>
+
+    <p class="suporte-apresentacao">
+      Olá! Meu nome é <strong>Paulo Afonso Arruda</strong> e estarei responsável pelo 
+      <span class="suporte-destaque">suporte técnico da plataforma</span>.
+    </p>
+
+    <p class="suporte-descricao">
+      Se tiver qualquer dificuldade de acesso, problema com login, certificado ou dúvidas sobre o uso do Moodle, 
+      pode entrar em contato comigo pelos canais abaixo:
+    </p>
+
+    <div class="suporte-botoes">
+      <a href="https://www.linkedin.com/in/pauloafonsoarruda/" target="_blank" class="btn-linkedin">
+        <i class="ph-fill ph-linkedin-logo"></i> LinkedIn
+      </a>
+      
+      <a href="https://wa.me/554197876249" target="_blank" class="btn-whatsapp">
+        <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="suporte-card">
+    <!-- Foto de perfil -->
+    <img 
+      src="https://media.licdn.com/dms/image/v2/D4D03AQEXa534ZNAB_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688699683044?e=1761177600&v=beta&t=g6Y2z106G_Xvb_MtsUCMvYKgk_OqpuSUUAqzEPz-Qyo" 
+      alt="Foto de Hanna Lúcio" 
+      class="suporte-foto">
+
+    <h2 class="suporte-titulo">Secretária Acadêmica</h2>
+
+    <p class="suporte-apresentacao">
+      Olá! Eu sou <strong>Hanna Lúcio</strong>, responsável pelo 
+      <span class="suporte-destaque">apoio acadêmico</span>
+      do curso.  
+    Estou à disposição para auxiliar com matrículas, documentos, certificados e demais demandas acadêmicas.
+    </p>
+
+    <p class="suporte-descricao">
+          Você pode falar comigo diretamente pelos canais abaixo:
+
+    </p>
+
+    <div class="suporte-botoes">
+      <a href="https://www.linkedin.com/in/hanna-l%C3%BAcio-782813b4" target="_blank" class="btn-linkedin">
+        <i class="ph-fill ph-linkedin-logo"></i> Meu LinkedIn
+      </a>
+      
+      <a href="https://wa.me/55800730303" target="_blank" class="btn-whatsapp">
+        <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,15 @@
-<script>
+<!-- Importação de ícones -->
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+<script defer>
    function importarPhosphorIcons() {
       const style = document.createElement("style");
       style.textContent = `
-    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
-    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
-    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
-    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
-  `;
+        @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
+        @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
+        @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
+        @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
+      `;
       document.head.appendChild(style);
    }
    importarPhosphorIcons();
@@ -40,21 +43,38 @@
          });
       }
 
-      // Restaura inicialmente
       restaurarIcones();
 
-      // Observa mudanças no body
-      const observer = new MutationObserver(() => {
-         restaurarIcones();
-      });
-
+      const observer = new MutationObserver(() => restaurarIcones());
       observer.observe(document.body, { childList: true, subtree: true });
    }
 
-   // Ativar ao carregar a página
    window.addEventListener('DOMContentLoaded', protegerBlcIcones);
-
 </script>
+
+<!-- Root -->
+<style>
+   :root{
+      /*Variáveis de Cores*/
+      --color-theme: #3D953E;
+      --color-header: #fff;
+      --color-text-header: #3D953E;
+      --color-back-btn: #3D953E;
+      --color-front-btn: #fff;
+      --color-body: #fff;
+
+      /* Variáveis de Imagem */
+      /* Página Inicial - Desktop */
+      --tela-principal: url(https://cdn.krissiesodre.com/moodle/educaCidadaobannerPrincipal3.jpg);
+
+      /* Página Inicial - Mobile */
+      --tela-principalMobile: url(https://cdn.krissiesodre.com/moodle/hagBackgroundMobile.svg);
+
+      /* Tela de Login */
+      --tela-Login: url(https://cdn.krissiesodre.com/moodle/hagBackgroundTela.svg);
+
+   }
+</style>
 
 <!-- Imagem Pagina Inicial deslogada -->
 <style>
@@ -76,7 +96,7 @@
    .path-login .inner_page_breadcrumb {
       margin-top: 87px;
       height: calc(100vw* 0.48) !important;
-      background-image: url(https://cdn.krissiesodre.com/moodle/educaCidadaobannerPrincipal2.svg);
+      background-image: var(--tela-principal);
    }
 
    #page-login-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v,
@@ -110,26 +130,6 @@
    }
 </style>
 
-
-<!-- Importação de ícones -->
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-<!-- Root -->
-<style>
-   :root {
-      --color-theme: #3D953E;
-      --color-header: #fff;
-      --color-text-header: #3D953E;
-      --color-back-btn: #3D953E;
-      --color-front-btn: #fff;
-      --color-body: #fff;
-   }
-
-   @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
-   @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
-   @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
-   @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
-</style>
 <!-- Style Desktop -->
 <style>
    /* Ícones do Painel */
@@ -434,7 +434,7 @@
       #page-site-index section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v {
          margin-top: 87px;
          height: calc(100vh - 87px - 71px) !important;
-         background-image: url(https://cdn.krissiesodre.com/moodle/educandosBackgroundMobile.png);
+         background-image: url(https://cdn.krissiesodre.com/moodle/educandosBackgroundMobile.svg);
          background-position-y: center;
          width: 100vw;
          background-position: center;
@@ -819,3 +819,4 @@
       }
    }
 </style>
+<meta name="robots" content="noindex" />

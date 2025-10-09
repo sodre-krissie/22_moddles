@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   .btnCardCurso{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      -webkit-background-clip: border-box;
+      border-radius: .5rem;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+      margin-bottom: 8px;
+      cursor: pointer;
+   }
+
+   .figureCard{
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      padding: 16px;
+      width: 100%;
+      border-radius: .5rem;
+      position: relative;
+      height: 10rem !important;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   img.imgCard {
+      min-width: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+   }
+
+   .btnCardCurso span.multiline {
+      padding: .8rem;
+      text-align: left;
+      text-transform: uppercase;
+   }
+</style>
+<body>
+    <button class="btnCardCurso" type="button" onclick="location.href=''" aria-label="Aacessar Lê Livros">
+        <figure class="figureCard">
+            <img class="imgCard" alt="" src="/unialfa/imgLivro.png">
+        </figure>
+        <span class="multiline">
+            Acesse Biblioteca Digital
+        </span>
+    </button>
+</body>
+</html>
+
+<script>
+(function(){
+  const LINK = 'https://integracaoprotheus.unialfa.com.br/elivro?matricula=2222'; // <-- troque pelo link da Biblioteca Digital
+
+  function createButton(){
+    if (document.querySelector('.btnCardCurso')) return null;
+
+    const button = document.createElement('button');
+    button.className = 'btnCardCurso';
+    button.type = 'button';
+    button.setAttribute('aria-label', 'Acessar Biblioteca Digital');
+
+    button.addEventListener('click', function(){
+      window.open(LINK, '_blank', 'noopener');
+    });
+
+    const figure = document.createElement('figure');
+    figure.className = 'figureCard';
+    const img = document.createElement('img');
+    img.className = 'imgCard';
+    img.src = 'https://cdn.krissiesodre.com/moodle/imgLivro.png';
+    img.alt = '';
+    figure.appendChild(img);
+
+    const span = document.createElement('span');
+    span.className = 'multiline';
+    span.textContent = 'Acesse Biblioteca Digital';
+
+    button.appendChild(figure);
+    button.appendChild(span);
+
+    return button;
+  }
+
+  function attemptInsert(){
+    const body = document.querySelector('body#page-my-index');
+    if (!body) return false;
+    if (!body.classList.contains('page-mycourses')) return false;
+    if (!document.querySelector('[data-region="paged-content-page"]')) return false;
+
+    const candidates = Array.from(document.querySelectorAll('[data-region="card-deck"]'));
+    const cardDeck = candidates.find(el => el.classList && el.classList.contains('card-grid')) || candidates[0];
+    if (!cardDeck) return false;
+    if (cardDeck.querySelector('.btnCardCurso')) return true;
+
+    const btn = createButton();
+    if (!btn) return true;
+
+    if (cardDeck.firstElementChild) cardDeck.insertBefore(btn, cardDeck.firstElementChild);
+    else cardDeck.appendChild(btn);
+
+    console.log('[BtnInserter] Botão inserido com sucesso dentro do cardDeck');
+    return true;
+  }
+
+  function whenReady(fn){
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
+  }
+
+  whenReady(function(){
+    if (attemptInsert()) return;
+
+    const observer = new MutationObserver((mutations, obs) => {
+      if (attemptInsert()) {
+        obs.disconnect();
+      }
+    });
+    observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+
+    setTimeout(() => observer.disconnect(), 12000);
+  });
+})();
+</script>
