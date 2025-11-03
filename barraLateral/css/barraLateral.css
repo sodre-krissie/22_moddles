@@ -1,0 +1,119 @@
+:root{
+   --colo-bg: #FEFEFE;
+   --color-fg: #343330;
+}
+
+body{
+   background: #cecece;
+   position: relative;
+}
+
+.barraLateralMain{
+   position: fixed;
+   top: 70px;
+   left: 0;
+   background: var(--colo-bg);
+   color: var(--color-fg);
+   padding: 24px 8px;
+   display: flex;
+   flex-direction: column;
+   /* gap: 24px; */
+   width: 40px;
+   height: calc(100vh - 70px);
+   overflow: visible;
+   z-index: 9;
+}
+
+.barraLateralContent{
+   display: flex;
+   flex-direction: column;
+}
+
+.btnBarraLateral{
+   cursor: pointer;
+   background: var(--colo-bg) !important;
+   border: none;
+   border-radius: 0 8px 8px 0;
+   font-size: 24px;
+   z-index: 10;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 16px;
+   width: fit-content;
+   padding: 16px 8px;
+}
+
+.btnBarraLateral .txtBtnBarraLateral{
+   display: none;
+   font-family: 'Inter', sans-serif;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 100%;
+   word-break: keep-all;
+   white-space: nowrap;
+   width: 100%;
+}
+
+.btnBarraLateral:hover{
+   box-shadow: 0px 4px 4px 0px #0000000D;
+}
+
+.btnBarraLateral:hover .txtBtnBarraLateral{
+   display: block;
+}
+
+.btnMobileBarra{
+   display: none;
+}
+
+img.imgBarraLateral {
+   padding: 0 4px;
+   max-width: none !important;
+}
+
+@media (max-width: 900px){
+   .barraLateralMain{
+      position: fixed;
+      top: auto;
+      bottom: 16px;
+      left: 16px;
+      width: fit-content;
+      height: fit-content;
+      padding: 0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 4px 0px #0000000D;
+   }
+
+   .barraLateralContent{
+      display: none;
+   }
+
+   .btnBarraLateral{
+      background: transparent;
+      border-radius: 8px;
+   }
+
+   .btnBarraLateral .txtBtnBarraLateral{
+      display: block;
+   }
+
+   .btnBarraLateral:hover{
+      box-shadow: none;
+   }
+
+   .btnMobileBarra{
+      cursor: pointer;
+      background: var(--colo-bg) !important;
+      border: none;
+      border-radius: 8px;
+      font-size: 24px;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      width: fit-content;
+      padding: 8px;
+      }
+}

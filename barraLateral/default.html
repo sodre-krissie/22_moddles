@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Default</title>
+</head>
+
+<body id="page-my-index">
+  <div id="page"></div>
+
+  <!-- Acrescentar no HTML Adicional -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+   </script>
+  <script>
+   // Lista centralizada de links da barra lateral
+   const links = {
+      onibooks: 'bib0001.onilearning.com.br',
+      lelivros: 'bib0001.onilearning.com.br',
+      calendario: 'https://alfaeducacao.telesapiens.com.br/calendar/view.php?view=month',
+      video: 'https://alfaeducacao.telesapiens.com.br/mod/page/view.php?id=1234',
+      pdf: 'https://alfaeducacao.telesapiens.com.br/mod/resource/view.php?id=5678',
+      manual: 'https://alfaeducacao.telesapiens.com.br/mod/resource/view.php?id=9999'
+   };
+
+   $(function () {
+      // verifica se o body tem o id desejado
+      if ($("body").attr("id") === "page-my-index") {
+        // carrega a barra lateral dentro de painel
+        $("#page").load("/barraLateral/barraLateral.html");
+      }
+   });
+  </script>
+  <!-- // -->
+</body>
+
+</html>

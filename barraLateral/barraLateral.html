@@ -1,0 +1,83 @@
+<link rel="stylesheet" type="text/css" href="/barraLateral/css/barraLateral.css">
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+<section class="barraLateralMain">
+   <div class="barraLateralContent">
+      <button class="btnBarraLateral" type="button" onclick="abrirPagina('onibooks')">
+         <img class="imgBarraLateral" src="/barraLateral/img/logo_ONIbooks.svg" alt="logo do ONIbooks">
+         <span class="txtBtnBarraLateral">Biblioteca ONIbooks</span>
+      </button>
+      <button class="btnBarraLateral" type="button" onclick="abrirPagina('calendario')">
+         <i class="ph ph-calendar-blank" aria-hidden="true"></i>
+         <span class="txtBtnBarraLateral">Calendário</span>
+      </button>
+      <button class="btnBarraLateral" type="button" onclick="abrirPagina('video')">
+         <i class="ph ph-video" aria-hidden="true"></i>
+         <span class="txtBtnBarraLateral">Vídeo de Ambientação</span>
+      </button>
+      <button class="btnBarraLateral" type="button" onclick="abrirPagina('pdf')">
+         <i class="ph ph-file-pdf" aria-hidden="true"></i>
+         <span class="txtBtnBarraLateral">PDF de Ambientação</span>
+      </button>
+      <button class="btnBarraLateral" type="button" onclick="abrirPagina('manual')">
+         <i class="ph ph-notebook" aria-hidden="true"></i>
+         <span class="txtBtnBarraLateral">Manual do Aluno</span>
+      </button>
+   </div>
+
+   <button class="btnMobileBarra" type="button" onclick="toggleMenu('open')">
+      <i class="ph ph-circles-four" aria-hidden="true"></i>
+   </button>
+</section>
+
+<script>
+   function abrirPagina(chave) {
+      // Verifica se a chave existe na lista
+      if (links[chave]) {
+         window.open(links[chave], '_blank'); // abre em nova aba
+      } else {
+         console.warn('Página não encontrada:', chave);
+      }
+   }
+
+   function toggleMenu(action) {
+      const barraLateralMain = document.querySelector(".barraLateralMain");
+      const barraLateralContent = document.querySelector(".barraLateralContent");
+      const btn = document.querySelector(".btnMobileBarra");
+      const iconeBtn = btn.querySelector("i.ph");
+
+      if (!barraLateralMain || !barraLateralContent || !btn || !iconeBtn) return;
+
+      if (action === 'open') {
+         // abre a barra lateral
+         barraLateralContent.style.display = 'flex';
+         iconeBtn.classList.remove('ph-circles-four');
+         iconeBtn.classList.add('ph-x');
+         btn.setAttribute("onclick", "toggleMenu('close')");
+
+         // adiciona listener para fechar ao clicar fora
+         document.addEventListener("click", handleOutsideClick);
+      } 
+      else if (action === 'close') {
+         // fecha a barra lateral
+         barraLateralContent.style.display = 'none';
+         iconeBtn.classList.remove('ph-x');
+         iconeBtn.classList.add('ph-circles-four');
+         btn.setAttribute("onclick", "toggleMenu('open')");
+
+         // remove o listener quando fechar
+         document.removeEventListener("click", handleOutsideClick);
+      }
+
+      // função interna para detectar clique fora
+      function handleOutsideClick(event) {
+         // se o clique não foi dentro da barra lateral nem no botão
+         if (!barraLateralMain.contains(event.target) && !btn.contains(event.target)) {
+            toggleMenu('close');
+         }
+      }
+   }
+
+
+
+</script>

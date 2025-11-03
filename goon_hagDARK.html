@@ -1,0 +1,121 @@
+<style>
+   :root{
+      --color-bg: #000612;
+      --color-fg: #fefefe;
+   }
+</style>
+
+<style>
+   body.ccnDarkMode, .ccnDarkMode .top_courses, .ccnDarkMode .our-dashbord{
+      background: var(--color-bg);
+      color: var(--color-fg);
+   }
+
+   .ccnDarkMode.ccn_context_dashboard .ccnDashBl, .ccnDarkMode.ccn_context_dashboard .application_statics, .ccnDarkMode.ccn_context_dashboard .my_course_content, .ccnDarkMode.ccn_context_dashboard .recent_job_activity, .ccnDarkMode.ccn_context_dashboard .my_setting_content, .ccnDarkMode.ccn_context_dashboard .dashbord .block:not(.block_cocoon_mynews):not(.block_starredcourses):not(.block_myoverview):not(.block_recentlyaccessedcourses):not(.block_cocoon_myviews):not(.block_cocoon_myorders):not(#mod_quiz_navblock), .ccnDarkMode.ccn_context_dashboard .message_container:not(.message_container_drawer) .inbox_user_list, .ccnDarkMode.ccn_context_dashboard .message_container:not(.message_container_drawer) .user_heading, .ccnDarkMode.ccn_context_dashboard .message_container .inbox_chatting_box, .ccnDarkMode.ccn_context_dashboard .message_container:not(.message_container_drawer), .ccnDarkMode.ccn_context_dashboard div.editor_atto_toolbar, .ccnDarkMode.ccn_context_dashboard .ccn-boxed-area, .ccnDarkMode.ccn_context_dashboard #mod_quiz_navblock, .ccnDarkMode.ccn_context_dashboard .que .info, .ccnDarkMode.ccn_context_dashboard .que .formulation, .ccnDarkMode.ccn_context_dashboard .dashbord .forumpost .body-content-container{
+      background-color: var(--color-bg);
+   }
+
+   .ccnDarkMode .ccn-page-wrapper a,
+   .ccnDarkMode .ccn-page-wrapper p,
+   .ccnDarkMode .ccn-page-wrapper span,
+   .ccnDarkMode .ccn-page-wrapper h1,
+   .ccnDarkMode .ccn-page-wrapper h2,
+   .ccnDarkMode .ccn-page-wrapper h3,
+   .ccnDarkMode .ccn-page-wrapper h4,
+   .ccnDarkMode .ccn-page-wrapper h5, .ccnDarkMode .top_courses .details h5,
+   .ccnDarkMode .ccn-page-wrapper div,
+   .ccnDarkMode .ccn-page-wrapper li,
+   .ccnDarkMode .siderbar_contact_widget i {
+      color: white !important;
+   }
+
+   .ccnDarkMode h1,
+.ccnDarkMode h2,
+.ccnDarkMode h3,
+.ccnDarkMode h4,
+.ccnDarkMode h5,
+.ccnDarkMode h6,
+.ccnDarkMode .h1,
+.ccnDarkMode .h2,
+.ccnDarkMode .h3,
+.ccnDarkMode .h4,
+.ccnDarkMode .h5,
+.ccnDarkMode .h6 {
+  color: var(--color-fg);
+}
+
+
+   @media only screen and (min-width: 1366px) {
+    .ccnDarkMode.ccn_context_dashboard header.header-nav a.navbar_brand:before {
+        height: calc(100% + 16px);
+    }
+
+      .ccnDarkMode.ccn_context_dashboard header.header-nav:has(.ff_one) a.navbar_brand:before {
+         height: calc(100% + 44px) !important;
+      }
+   }
+
+   .ccnDarkMode.ccn_context_dashboard .dashboard_main_content input[type=text], .ccnDarkMode.ccn_context_dashboard .dashboard_main_content input[type=number], .ccnDarkMode.ccn_context_dashboard .dashboard_main_content input[type=email], .ccnDarkMode.ccn_context_dashboard .dashboard_main_content textarea, .ccnDarkMode.ccn_context_dashboard .dashboard_main_content select, .ccnDarkMode.ccn_context_dashboard .dashboard_main_content .filemanager, .ccnDarkMode.ccn_context_dashboard .modal:not(.sign_up_modal) input[type=text], .ccnDarkMode.ccn_context_dashboard .modal:not(.sign_up_modal) textarea, .ccnDarkMode.ccn_context_dashboard .modal:not(.sign_up_modal) select, .ccnDarkMode.ccn_context_dashboard .modal:not(.sign_up_modal) .filemanager, .ccnDarkMode.ccn_context_dashboard #jump-to-activity, .ccnDarkMode.ccn_context_dashboard .ccn-forum-top-selectors select, .ccnDarkMode.ccn_context_dashboard .form-control, .ccnDarkMode.ccn_context_dashboard .forumsearch input.form-control, .ccnDarkMode.ccn_context_dashboard #page-heading-button .forumsearch input.form-control, .ccnDarkMode.ccn_context_dashboard .message_container_drawer.message_container .iu_heading .candidate_revew_search_box .btn{
+      background-color: #141414;
+      color: #CECECE;
+   }
+
+   .ccnDarkMode.ccn_context_dashboard .header_user_notif li .dropdown .notification_icon {
+    background-color: var(--color-bg);
+}
+
+.ccnDarkMode .secondary-navigation .navigation .nav-tabs .nav-link.active, .ccnDarkMode .secondary-navigation .navigation .nav-tabs .nav-link:hover, .ccnDarkMode .secondary-navigation .navigation .nav-tabs .nav-link:focus, .ccnDarkMode .secondary-navigation .navigation .nav-tabs .nav-link:active {
+    background: #c00073;
+    color: var(--color-fg);
+}
+
+
+
+.ccnDarkMode .input-group label {
+    color: black;
+}
+
+@media (min-width: 1200px) {
+    div#region-main .col-xl-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.justify-content-center:has(.candidate_revew_search_box form){
+   justify-content: flex-start !important;
+}
+
+.candidate_revew_search_box form{
+    border: 1px solid white;
+    border-radius: 56px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.ccnDarkMode .candidate_revew_search_box input.form-control, .ccnDarkMode .candidate_revew_search_box button {
+    background: #141414;
+    border-color: transparent !important;
+}
+
+.ccnDarkMode .candidate_revew_search_box input.form-control{
+   border-radius: 0 56px 56px 0;
+}
+
+.ccnDarkMode .candidate_revew_search_box button{
+   border-radius: 56px 0 0 56px;
+}
+
+.ccnDarkMode .candidate_revew_search_box button span{
+   color: var(--color-fg);
+}
+
+.ccnDarkMode.ccn_context_dashboard .ff_one{
+   background: #141414 !important;
+}
+
+.ccnDarkMode.ccn_context_dashboard .ff_one .ff_icon:has(.ph-book-open-text){
+   background-color: #d2d013;
+}
+
+</style>
