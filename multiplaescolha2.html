@@ -1,20 +1,20 @@
 <style>
    :root{
       /*Variáveis de Cores*/
-      --color-theme: #1E417D;
-      --color-text-header: #1E417D;
-      --color-back-btn: #1E417D;
+      --color-theme: #003C70;
+      --color-text-header: #003C70;
+      --color-back-btn: #003C70;
       --color-front-btn: #fff;
 
       /* Variáveis de Imagem */
       /* Página Inicial - Desktop */
-      --tela-principal: url(https://cdn.krissiesodre.com/moodle/agtuBackground.svg);
+      --tela-principal: url(https://cdn.krissiesodre.com/moodle/multiplaEscolhaTeste.svg);
 
       /* Página Inicial - Mobile */
-      --tela-principalMobile: url(https://cdn.krissiesodre.com/moodle/agtuBackgroundMobile.svg);
+      --tela-principalMobile: url(https://cdn.krissiesodre.com/moodle/multiplaEscolhaTesteMobile.svg);
 
       /* Tela de Login */
-      --tela-Login: url(https://cdn.krissiesodre.com/moodle/agtuBackgroundTela.svg);
+      --tela-Login: url(https://cdn.krissiesodre.com/moodle/multiplaEscolhaTesteLogin.svg);
 
       
    }
@@ -23,6 +23,10 @@
    #page-my-index #page-heading-button,
    #page-my-index .primary-navigation {
       display: none;
+   }
+
+   body.role-standard form.d-flex.align-items-center.editmode-switch-form {
+      display: none !important;
    }
 </style>
 <script>
@@ -82,9 +86,11 @@
    window.addEventListener('DOMContentLoaded', protegerBlcIcones);
 
 </script>
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
 <!-- Imagem Pagina Inicial deslogada -->
 <style>
+   @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
    .pagelayout-login #page {
       background-image: var(--tela-Login) !important;
       background-size: cover !important;
@@ -325,12 +331,12 @@
    }
 
    table th.header {
-      background: var(--color-theme) !important;
-      color: var(--color-front-btn);
+      background: #9fb0cf !important;
+      /*color: var(--color-front-btn);*/
    }
 
    a.toggle-category {
-      background: var(--color-theme) !important;
+      background: #9fb0cf !important;
       border: none;
       position: relative;
       display: flex;
@@ -351,8 +357,8 @@
    .path-grade-report-user .user-grade thead th,
    .grade-report-user .user-grade thead th,
    .path-calendar .maincalendar .calendarwrapper .calendartable th.header {
-      background-color: var(--color-theme);
-      color: var(--color-front-btn);
+      background-color: #9fb0cf;
+      /*color: var(--color-front-btn);*/
    }
 
    .path-grade-report-user .user-grade th.category a.toggle-category,
@@ -360,7 +366,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: var(--color-theme);
+      background: #9fb0cf;
       border: none;
    }
 
@@ -676,16 +682,16 @@
    }
 
    .mobile-menu .header.stylehome1 a:not(.mobileBrand):not(.ccn-btn-backtocourse) {
-      color: var(--color-theme);
+      color: var(--color-back-btn);
    }
 
    .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger):before,
    .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger) span {
-      background: var(--color-theme);
+      background: var(--color-back-btn);
    }
 
    #page-site-index .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger) span {
-      background: var(--color-theme);
+      background: var(--color-back-btn);
    }
 
    @media(max-width: 1200px) {
@@ -842,21 +848,18 @@
    }
 </style>
 
-
 <style>
-   #page-course-view-topics .inner_page_breadcrumb{
-      background-size: cover;
-      background-position: center;
-      height: 240px;
-   }
-   #page-course-view-topics .inner_page_breadcrumb:before{
-      background-image: none !important;
+   body:has(.barraLateralMain) .our-dashbord{
+      margin-left: 50px;
    }
 
-   #page-course-view-topics .inner_page_breadcrumb .breadcrumb_title, #page-course-view-topics .inner_page_breadcrumb li.breadcrumb-item a, , #page-course-view-topics .inner_page_breadcrumb li.breadcrumb-item::before{
-      color: var(--color-theme) !important;
+   @media (max-width: 900px){
+      .barraLateralMain{
+         top: auto;
+      }
+
+      body:has(.barraLateralMain) .our-dashbord{
+         margin-left: 0;
+      }
    }
 </style>
-
-11: https://cdn.krissiesodre.com/moodle/headerCourseAGTU11.jpg
-11: https://cdn.krissiesodre.com/moodle/headerCourseAGTU12.jpg

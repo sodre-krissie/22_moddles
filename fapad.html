@@ -1,20 +1,21 @@
+
 <style>
    :root{
       /*Variáveis de Cores*/
-      --color-theme: #1E417D;
-      --color-text-header: #1E417D;
-      --color-back-btn: #1E417D;
+      --color-theme: #111C41;
+      --color-text-header: #111C41;
+      --color-back-btn: #111C41;
       --color-front-btn: #fff;
 
       /* Variáveis de Imagem */
       /* Página Inicial - Desktop */
-      --tela-principal: url(https://cdn.krissiesodre.com/moodle/agtuBackground.svg);
+      --tela-principal: url(https://cdn.krissiesodre.com/moodle/fapadBackground.svg);
 
       /* Página Inicial - Mobile */
-      --tela-principalMobile: url(https://cdn.krissiesodre.com/moodle/agtuBackgroundMobile.svg);
+      --tela-principalMobile: url(https://cdn.krissiesodre.com/moodle/fapadBackgroundMobile.svg);
 
       /* Tela de Login */
-      --tela-Login: url(https://cdn.krissiesodre.com/moodle/agtuBackgroundTela.svg);
+      --tela-Login: url(https://cdn.krissiesodre.com/moodle/fapadBackgroundTela.svg);
 
       
    }
@@ -82,6 +83,7 @@
    window.addEventListener('DOMContentLoaded', protegerBlcIcones);
 
 </script>
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
 <!-- Imagem Pagina Inicial deslogada -->
 <style>
@@ -112,6 +114,12 @@
       background-image: var(--tela-Login);
       background-repeat: no-repeat;
       background-size: cover;
+   }
+
+   #page-site-index.ccnUA section.inner_page_breadcrumb.ccn_breadcrumb_default.ccn-clip-l.ccn-caps-capitalize.ccn-breadcrumb-title-v.ccn-breadcrumb-trail-v{
+      margin-top: -12px;
+      height: 0 !important;
+      background-image: none !important;
    }
 
    #page-login-index .inner_page_breadcrumb:before {
@@ -162,6 +170,10 @@
       position: relative;
       top: 12%;
       color: var(--color-front-btn) !important;
+   }
+
+   .header_user_notif li .dropdown .notification_icon{
+      background: var(--color-theme) !important;
    }
 
    /* Icone de Idioma */
@@ -325,7 +337,7 @@
    }
 
    table th.header {
-      background: var(--color-theme) !important;
+      background: #86b0cb !important;
       color: var(--color-front-btn);
    }
 
@@ -842,21 +854,56 @@
    }
 </style>
 
-
 <style>
-   #page-course-view-topics .inner_page_breadcrumb{
-      background-size: cover;
+   #page-course-view-remuiformat .inner_page_breadcrumb{
+      background-image: url(https://cdn.krissiesodre.com/moodle/headerCourseFAPAD.jpeg);
       background-position: center;
       height: 240px;
    }
-   #page-course-view-topics .inner_page_breadcrumb:before{
+   #page-course-view-remuiformat .inner_page_breadcrumb:before{
       background-image: none !important;
-   }
-
-   #page-course-view-topics .inner_page_breadcrumb .breadcrumb_title, #page-course-view-topics .inner_page_breadcrumb li.breadcrumb-item a, , #page-course-view-topics .inner_page_breadcrumb li.breadcrumb-item::before{
-      color: var(--color-theme) !important;
    }
 </style>
 
-11: https://cdn.krissiesodre.com/moodle/headerCourseAGTU11.jpg
-11: https://cdn.krissiesodre.com/moodle/headerCourseAGTU12.jpg
+
+<style>
+   #page-question-type-multichoice .tox-menu.tox-collection.tox-collection--list{
+      position: relative !important;
+      bottom: 200px !important;
+      max-height: 180px !important;
+   }
+
+   #page-question-type-multichoice #fitem_id_questiontext .tox-menu.tox-collection.tox-collection--list{
+      bottom: 330px !important;
+   }
+
+   #page-question-type-multichoice [id*="fitem_id_feedback_"] .tox-menu.tox-collection.tox-collection--list, #page-question-type-multichoice [id*="fitem_answer_"] .tox-menu.tox-collection.tox-collection--list,
+   #page-question-type-multichoice [id*="fitem_id_answer_"] .tox-menu.tox-collection.tox-collection--list{
+      bottom: 130px !important;
+   }
+
+   #page-question-type-multichoice .tox-tiered-menu:has(.tox-background-menu) .tox-selected-menu, #page-question-type-multichoice .tox-tiered-menu:has(.tox-selected-menu) .tox-menu.tox-collection.tox-collection--list:nth-of-type(2){
+      left: 115px !important;
+   }
+
+   #page-question-type-multichoice .tox.tox-silver-sink.tox-silver-popup-sink.tox-tinymce-aux{
+      position: absolute !important;
+   }
+</style>
+
+Reunião 23/03/26
+- livros de notas:
+usar 735 com exemplo e 639 (do ano passado)
+todos valem 10 cada um
+Questionário tem peso 4
+Final tem peso 6
+
+Os questionário devem finalizar até dia 30/06
+
+
+5. Avaliações (em junho)
+avaliação presencial, avaliação substitutiva (só quem não fez prova, tem que pagar. Prova com senha) e exame
+conteúdo das 4 unidades
+Todas tem senha
+
+

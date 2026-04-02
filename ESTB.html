@@ -1,20 +1,20 @@
 <style>
    :root{
       /*Variáveis de Cores*/
-      --color-theme: #1E417D;
-      --color-text-header: #1E417D;
-      --color-back-btn: #1E417D;
+      --color-theme: #2A3267;
+      --color-text-header: #2A3267;
+      --color-back-btn: #2A3267;
       --color-front-btn: #fff;
 
       /* Variáveis de Imagem */
       /* Página Inicial - Desktop */
-      --tela-principal: url(https://cdn.krissiesodre.com/moodle/agtuBackground.svg);
+      --tela-principal: url(https://cdn.krissiesodre.com/moodle/ESTBBackground.svg);
 
       /* Página Inicial - Mobile */
-      --tela-principalMobile: url(https://cdn.krissiesodre.com/moodle/agtuBackgroundMobile.svg);
+      --tela-principalMobile: url(https://cdn.krissiesodre.com/moodle/ESTBBackgroundMobile.svg);
 
       /* Tela de Login */
-      --tela-Login: url(https://cdn.krissiesodre.com/moodle/agtuBackgroundTela.svg);
+      --tela-Login: url(https://cdn.krissiesodre.com/moodle/ESTBBackgroundTela.svg);
 
       
    }
@@ -82,6 +82,7 @@
    window.addEventListener('DOMContentLoaded', protegerBlcIcones);
 
 </script>
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
 <!-- Imagem Pagina Inicial deslogada -->
 <style>
@@ -162,6 +163,10 @@
       position: relative;
       top: 12%;
       color: var(--color-front-btn) !important;
+   }
+
+   .header_user_notif li .dropdown .notification_icon{
+      background: var(--color-theme) !important;
    }
 
    /* Icone de Idioma */
@@ -325,7 +330,7 @@
    }
 
    table th.header {
-      background: var(--color-theme) !important;
+      background: #86b0cb !important;
       color: var(--color-front-btn);
    }
 
@@ -841,22 +846,3 @@
       }
    }
 </style>
-
-
-<style>
-   #page-course-view-topics .inner_page_breadcrumb{
-      background-size: cover;
-      background-position: center;
-      height: 240px;
-   }
-   #page-course-view-topics .inner_page_breadcrumb:before{
-      background-image: none !important;
-   }
-
-   #page-course-view-topics .inner_page_breadcrumb .breadcrumb_title, #page-course-view-topics .inner_page_breadcrumb li.breadcrumb-item a, , #page-course-view-topics .inner_page_breadcrumb li.breadcrumb-item::before{
-      color: var(--color-theme) !important;
-   }
-</style>
-
-11: https://cdn.krissiesodre.com/moodle/headerCourseAGTU11.jpg
-11: https://cdn.krissiesodre.com/moodle/headerCourseAGTU12.jpg

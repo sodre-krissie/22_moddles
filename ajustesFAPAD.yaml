@@ -1,0 +1,140 @@
+- Conteúdo com layout da One Page com animada
+- data de inicio do curso: começando hoje
+- Formato de curso: Edwiser
+- Layout do curso: card
+- Ocultar os Avisos
+
+Cursos OK:
+741 - ÉTICA E CIDADANIA
+742 - FUNDAMENTOS DA ADMINISTRAÇÃO
+744 - COMUNICAÇÃO EMPRESARIAL
+746 - FUNDAMENTOS CONTÁBEIS
+747 - COMPORTAMENTO ORGANIZACIONAL
+748 - ECONOMIA BRASILEIRA
+749 - FUNDAMENTOS DE MARKETING
+750 - MATEMÁTICA PARA ADMINISTRADORES
+751 - SOCIOLOGIA E ÉTICA PROFISSIONAL
+752 - TEORIAS DA ADMINISTRAÇÃO
+753 - DIREITO EMPRESARIAL
+754 - DIREITOS HUMANOS E SOCIAIS
+755 - DIREITO DO TRABALHO E PREVIDÊNCIA
+756 - ESTATÍSTICA BÁSICA
+757 - GESTÃO ESTRATÉGICA DE CUSTOS
+758 - GESTÃO DA TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO
+759 - ORGANIZAÇÃO SISTEMAS E MÉTODOS
+760 - CLUSTERS REDES EMPRESARIAIS DE NEGÓCIOS
+761 - GESTÃO AMBIENTAL E SUSTENTABILIDADE
+762 - GESTÃO DA INOVAÇÃO E COMPETITIVIDADE
+763 - GESTÃO DE OPERAÇÕES
+764 - MATEMÁTICA FINANCEIRA
+765 - METODOLOGIA DA PESQUISA CIENTÍFICA
+766 - CIÊNCIA DE DADOS
+767 - ESTRATÉGIAS DE GESTÃO E ORGANIZAÇÃO EMPRESARIAL
+768 - EMPREENDEDORISMO
+769 - GESTÃO DO CONHECIMENTO E INTELIGÊNCIA COMPETITIVA
+770 - INTELIGÊNCIA EMOCIONAL
+771 - LIDERANÇA E GESTÃO DE EQUIPES
+772 - GESTÃO DE PESSOAS
+867 - GESTÃO DE POLÍTICAS PÚBLICAS
+868 - GESTÃO DE STARTUP
+871 - FINANÇAS CORPORATIVAS
+874 - DIREITO ADMINISTRATIVO
+ANÁLISE DE DADOS PARA DECISÕES ESTRATÉGICAS
+LIBRAS - LÍNGUA BRASILEIRA DE SINAIS
+LOGÍSTICA EMPRESARIAL
+Relações étnico-raciais e cultura afro-brasileira e indígena
+SISTEMAS DE INFORMAÇÕES GERENCIAIS
+
+
+OBS: 
+742 - FUNDAMENTOS DA ADMINISTRAÇÃO não tem questionário na Unidade 3
+755 - DIREITO DO TRABALHO E PREVIDÊNCIA tem dois questionários cada unidade
+763 - GESTÃO DE OPERAÇÕES tem 5 unidades
+765 - METODOLOGIA DA PESQUISA CIENTÍFICA já estava parte configurado
+
+
+Ajustes FAPAD
+- Conteúdo com layout da One Page com animada
+- Banner - o mesmo pra todos (injetar via css para banner com título)
+- data de inicio do curso: começando hoje
+- Formato de curso: Edwiser
+- Layout do curso: card
+- Ocultar os Avisos
+- Inserir a ementa como arquivo
+- Colocar na Unidade: Unidade x - nome que tem na ementa
+- Questionários com Condições de conclusão precisa ter "Ver atividade"
+- Questionários precisam ter data de inicio e fim: 23/02 a 30/06
+- Texto padrão para Fórum de Boas Vindas
+
+
+746 - FUNDAMENTOS CONTÁBEIS > FUNDAMENTOS_CONTABEIS 
+749 - FUNDAMENTOS DE MARKETING > FUNDAMENTOS_DE_MARKETING
+751 - SOCIOLOGIA E ÉTICA PROFISSIONAL > SOCIOLOGIA_E_ETICA_PROFISSIONAL
+756 - ESTATÍSTICA BÁSICA > ESTATISTICA_BASICA
+757 - GESTÃO ESTRATÉGICA DE CUSTOS > GESTAO_ESTRATEGICA_DE_CUSTOS 
+759 - ORGANIZAÇÃO SISTEMAS E MÉTODOS > ORGANIZACAO_SISTEMAS_E_METODOS
+760 - CLUSTERS REDES EMPRESARIAIS DE NEGÓCIOS > CLUSTERS_E_REDES_EMPRESARIAIS_DE_NEGOCIOS
+762 - GESTÃO DA INOVAÇÃO E COMPETITIVIDADE > GESTAO_DA_INOVACAO_E_COMPETITIVIDADE
+765 - METODOLOGIA DA PESQUISA CIENTÍFICA > Pensamento científico
+767 - ESTRATÉGIAS DE GESTÃO E ORGANIZAÇÃO EMPRESARIAL > ESTRATEGIAS_DE_GESTAO_E_ORGANIZACAO_EMPRESARIAL
+769 - GESTÃO DO CONHECIMENTO E INTELIGÊNCIA COMPETITIVA > GESTAO_DO_CONHECIMENTO_E_INTELIGENCIA_COMPETITIVA
+770 - INTELIGÊNCIA EMOCIONAL > INTELIGENCIA_EMOCIONAL
+771 - LIDERANÇA E GESTÃO DE EQUIPES > LIDERANÇA E GESTÃO DE EQUIPES
+867 - GESTÃO DE POLÍTICAS PÚBLICAS > GESTAO_DE_POLITICAS_PUBLICAS
+868 - GESTÃO DE STARTUP > GESTAO_DE_STARTUP
+LOGÍSTICA EMPRESARIAL > LOGISTICA_EMPRESARIAL
+SISTEMAS DE INFORMAÇÕES GERENCIAIS > SISTEMAS_DE_INFORMACOES_GERENCIAIS
+
+Alterações de 25/02/2026:
+- Copiar bloco de Ementa dos cursos de 2025/2
+- Criar o arquivo de cronograma de atividades em arquivo .doc
+- Copiar Orientações gerais
+- Restante pode excluir
+- Retirar as restrições de acesso dos questionários, deixar apenas dentro do ONIquest
+
+Não encontradas as correspondências:
+749 - FUNDAMENTOS DE MARKETING *
+759 - ORGANIZAÇÃO SISTEMAS E MÉTODOS *
+763 - Gestão de Operações *
+ANÁLISE DE DADOS PARA DECISÕES ESTRATÉGICAS *
+LIBRAS - LÍNGUA BRASILEIRA DE SINAIS * 
+LOGÍSTICA EMPRESARIAL* 
+SISTEMAS DE INFORMAÇÕES GERENCIAIS *
+
+
+
+Direito seguirá o mesmo padrão das disciplinas de ADMINISTRAÇÃO
+Configurações gerais do curso:
+- Alterar data de inicio do curso para 23/02/2026
+- Desmarcar o "Habilitar" em Data de término do curso
+- Formato de curso: Edwiser
+- Layout do curso: card
+
+Dentro do campo "introdução":
+- Alterar nome para EMENTA
+- Verificar disciplina correspondende em 2025/02 e copiar o blocos:
+  - Texto da seção de EMENTA,
+  - Sobre o professor
+  - Contato - Utilizar o email padrão: tutoria@fapad.edu.br
+  - Boas-Vindas
+  - Ocultar os Avisos
+  - Inserir a ementa como arquivo - Baixar arquivo do ONIpublishing
+  - Criar o arquivo de "Cronograma de Atividades" com o PDF "Calendário 2026"
+
+Dentro da seção de Unidades:
+- Conteúdo com layout da One Page com animação (verificar em todas as unidades)
+- Colocar na Unidade: Unidade x - nome que tem na ementa
+- Questionários com Condições de conclusão precisa ter "Ver atividade"
+- Questionários precisam ter data de inicio e fim: 23/02 a 30/
+
+
+Fazer uma verificação geral dos cursos de ADM e Direito
+Utilizar como exemplo: https://ead.fapad.edu.br/course/view.php?id=1147&notifyeditingon=1
+
+Pontos importantes:
+Verificar se tem todos os blocos (Info do professor, contato, Boas-vindas, Avaliação presencial, Cronograma de atividades, Acesso ao AVA, Orientações gerais e ementa)
+
+Cronograma de atividades deve ter as datas de 2026
+Nas Orientações gerais, tem um link de cronograma de atividades (esse link precisa ser substituído para o link do cronograma de atividades dentro da mesma disciplina)
+
+No ONIquest, alterar a data de término dos questionários para 09/07/2026 23:59

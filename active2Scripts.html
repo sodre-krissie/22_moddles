@@ -1,0 +1,346 @@
+<script>
+  // Verifica se a URL contém "onilearning.com.br"
+  if (window.location.href.includes("onilearning.com.br")) {
+    // Cria os scripts do Hand Talk
+    var handtalkScript = document.createElement("script");
+    handtalkScript.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js";
+    handtalkScript.onload = function () {
+      new HT({
+        token: "158a35ee8ca66e34978aa26376e3f675",
+      });
+    };
+    document.head.appendChild(handtalkScript);
+    console.log("Hand Talk carregado com sucesso.");
+  } else {
+    // Adiciona o HTML do VLibras
+    document.write(`
+      <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+          </div>
+      </div>
+    `);
+
+    
+    // Cria o script do VLibras
+    var vlibrasScript = document.createElement("script");
+    vlibrasScript.src = "https://vlibras.gov.br/app/vlibras-plugin.js";
+    vlibrasScript.onload = function () {
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    };
+    document.head.appendChild(vlibrasScript);
+    console.log("Vlibras carregado com sucesso.");
+  }
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(".activity.presentation .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/apresentacao.svg");
+        $(".activity.resource .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/arquivo.svg");
+        $(".activity.audio .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/audio.svg");
+        $(".activity.forum .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/avisos.svg");
+        $(".activity.bigbluebuttonbn .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/bbb.svg");
+        $(".activity.simplecertificate .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/certificado.svg");
+        $(".activity.simplecertificate .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/certificado.svg");
+        $(".activity.url .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/linkexterno.svg");
+        $(".activity.lti .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/lti.svg");
+        $(".activity.quiz .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/questionario.svg");
+        $(".activity.assign .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/tarefa.svg");
+        $(".activity.scorm .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/trilha.svg");
+        $(".activity.subcourse .activity-instance").find("img").attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/disciplina.svg");
+    });
+</script>
+
+<script>
+  $(document).ready(function () {
+  if ($("body").attr("id") === "page-course-view-topics") {
+    $(".activitytitle").each(function () {
+      const $activity = $(this).closest(".activity");
+      const $img = $activity.find(".activityiconcontainer img");
+      const $instancename = $activity.find(".instancename").first();
+      const texto = $instancename.clone().children().remove().end().text().trim();
+
+      console.log("Texto detectado:", texto); // debug
+
+      if (texto === "Conteúdo") {
+        $img.attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/trilha.svg");
+      } else if (texto === "Questionário") {
+        $img.attr("src", "https://oni360.com.br/externo/krissie/cdnMoodle/icones/questionario.svg");
+      }
+    });
+  }
+});
+
+</script>
+<script>
+function atualizarPorcentagens() {
+    if (document.body.id === "page-course-view-cards") {
+        console.log("Página do Curso acessada");
+
+        const cards = document.querySelectorAll('.bg-secondary.small.text-body.section-completion');
+
+        cards.forEach(section => {
+            const innerCircle = section.querySelector('circle.inner');
+            let value;
+
+            if (innerCircle) {
+                const dashOffset = parseFloat(innerCircle.getAttribute('stroke-dashoffset'));
+                if (!isNaN(dashOffset)) {
+                    value = Math.round(Math.abs(100 - dashOffset));
+                    console.log(`Valor calculado: ${value}%`);
+                }
+            }
+
+            // Se não houver innerCircle, considera 0%
+            if (value === undefined) {
+                value = 0;
+                console.warn("innerCircle ausente — valor assumido: 0%");
+            }
+
+            // Atualiza todos os TextNodes com '{$a->porcentagem}'
+            section.childNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('{$a->porcentagem}')) {
+                    node.textContent = `${value}%`;
+                }
+            });
+        });
+    }
+}
+// Espera os cards carregarem
+const interval = setInterval(() => {
+    const ready = document.querySelectorAll('.bg-secondary.small.text-body.section-completion').length > 0;
+    const preloader = document.querySelector('.preloader.ccn_preloader_load');
+
+    if (ready && preloader && getComputedStyle(preloader).display === 'none') {
+        clearInterval(interval);
+        atualizarPorcentagens();
+    }
+}, 300);
+</script>
+
+<script>
+document.querySelectorAll('.ff_icon').forEach(icon => {
+   const spanElement = icon.querySelector('span');
+
+   // Mapeamento de substituições: classes de <span> para classes de <i>
+   const replacementMap = {
+        'fa fa-book': 'ph-fill ph-book-open-text',
+        //'fa fa-users': 'ph-fill ph-user',
+        'flaticon-speech-bubble': 'ph-fill ph-book-open-text',
+        'flaticon-cap': 'ph-fill ph-books',
+        'ccn-flaticon-bookmark-1': 'ph-fill ph-books',
+        'flaticon-settings': 'ph-fill ph-calendar-blank',
+        'flaticon-calendar': 'ph-fill ph-calendar-blank',
+        'flaticon-rating': 'ph-fill ph-exam',
+   };
+
+   if (spanElement) {
+       const spanClassList = Array.from(spanElement.classList).join(' ');
+
+       // Verifica se as classes do <span> estão no mapeamento
+       if (replacementMap[spanClassList]) {
+           const newIcon = document.createElement('i');
+           newIcon.className = replacementMap[spanClassList];
+
+           // Substitui o <span> pelo novo <i> com as classes correspondentes
+           icon.replaceChild(newIcon, spanElement);
+       }
+   }
+});
+
+</script>
+<script>
+function updateHeaderIcons() {
+   const notifList = document.querySelector('.header_user_notif.ccn-frontend-header_user_notif.pull-right.dn-smd');
+
+   if (notifList) {
+       notifList.querySelectorAll('span, i').forEach(icon => {
+           // Mapeamento de substituições: classes do elemento atual para as classes do novo <i>
+           const replacementMap = {
+               'ccn-flaticon-hide': 'ph ph-moon',
+               'flaticon-alarm': 'ph ph-bell-simple',
+               'flaticon-speech-bubble': 'ph ph-chats-circle',
+               'flaticon-settings': 'ph ph-gear'
+           };
+
+           const iconClassList = Array.from(icon.classList).join(' ');
+
+           // Verifica se as classes do elemento estão no mapeamento
+           for (const [oldClasses, newClasses] of Object.entries(replacementMap)) {
+               if (iconClassList.includes(oldClasses)) {
+                   const newIcon = document.createElement('i');
+                   newIcon.className = newClasses;
+                   
+                   // Preserva o título, o papel e a descrição se o elemento original for um <i>
+                   if (icon.tagName === 'I') {
+                       newIcon.title = icon.title;
+                       newIcon.role = icon.role;
+                       newIcon.setAttribute('aria-label', icon.getAttribute('aria-label'));
+                   }
+                   
+                   // Substitui o elemento pelo novo <i>
+                   icon.replaceWith(newIcon);
+                   break;
+               }
+           }
+       });
+   }
+}
+
+// Chama a função para realizar as substituições
+updateHeaderIcons();
+
+</script>
+<script>
+function alterarImagens() {
+    // Seleciona todas as divs com a classe específica
+    const iconeONIlive = document.querySelectorAll('.other.activityiconcontainer.modicon_bigbluebuttonbn');
+    
+    iconeONIlive.forEach(div => {
+        // Seleciona a imagem dentro de cada div
+        const imgElement = div.querySelector('img.icon.activityicon');
+        
+        if (imgElement) {
+            // Altera o atributo src da imagem
+            imgElement.src = 'https://scorm.onilearning.com.br//imagens_ava//bbb.png';
+        }
+    });
+}
+alterarImagens();
+</script>
+<script>
+function alterarPlaceholder() {
+    // Seleciona o input pelo ID
+    const input = document.getElementById('username');
+    
+    if (input) {
+        // Altera o atributo placeholder
+        input.placeholder = 'Identificação de usuário';
+    }
+}
+alterarPlaceholder(); 
+</script>
+<script>
+function importarPhosphorIcons() {
+  const style = document.createElement("style");
+  style.textContent = `
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css');
+    @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/duotone/style.css');
+  `;
+  document.head.appendChild(style);
+}
+importarPhosphorIcons();
+</script>
+
+<script>
+// Fecha o chat ao clicar fora de #tutorVirtual
+document.addEventListener("click", function(event) {
+  const tutor = document.getElementById("tutorVirtual");
+  const chat = document.getElementById("chatTutorMain");
+
+  if (chat.classList.contains("is-open") && !tutor.contains(event.target)) {
+    toggleChatTutor();
+  }
+});
+</script>
+
+<script>
+function atualizarPorcentagens() {
+    if (document.body.id === "page-course-view-cards") {
+        console.log("Página do Curso acessada");
+
+        const cards = document.querySelectorAll('.bg-secondary.small.text-body.section-completion');
+
+        cards.forEach(section => {
+            const innerCircle = section.querySelector('circle.inner');
+            let value;
+
+            if (innerCircle) {
+                const dashOffset = parseFloat(innerCircle.getAttribute('stroke-dashoffset'));
+                if (!isNaN(dashOffset)) {
+                    value = Math.round(Math.abs(100 - dashOffset));
+                    console.log(`Valor calculado: ${value}%`);
+                }
+            }
+
+            // Se não houver innerCircle, considera 0%
+            if (value === undefined) {
+                value = 0;
+                console.warn("innerCircle ausente — valor assumido: 0%");
+            }
+
+            // Atualiza todos os TextNodes com '{$a->porcentagem}'
+            section.childNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('{$a->porcentagem}')) {
+                    node.textContent = `${value}%`;
+                }
+            });
+        });
+    }
+}
+// Espera os cards carregarem
+const interval = setInterval(() => {
+    const ready = document.querySelectorAll('.bg-secondary.small.text-body.section-completion').length > 0;
+    const preloader = document.querySelector('.preloader.ccn_preloader_load');
+
+    if (ready && preloader && getComputedStyle(preloader).display === 'none') {
+        clearInterval(interval);
+        atualizarPorcentagens();
+    }
+}, 300);
+
+</script>
+<script>
+setTimeout(() => {
+            atualizarPorcentagens();
+        }, 400);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+   </script>
+  <script>
+   // Lista centralizada de links da barra lateral
+   const links = {
+      onibooks: 'https://active2.onilearning.com.br/mod/url/view.php?id=199',
+      academy: 'https://active2.onilearning.com.br/mod/url/view.php?id=663',
+      calendario: 'https://active2.onilearning.com.br/calendar/view.php?view=month',
+      perfil: 'https://active2.onilearning.com.br/user/profile.php',
+      manual: 'https://active2.onilearning.com.br/course/view.php?id=137'
+   };
+
+   $(function () {
+  // verifica se o body tem o id e a classe desejados
+    // tenta carregar a barra lateral dentro de #page
+    $("#page").load("https://oni360.com.br/externo/krissie/cdnMoodle/barraLateralMoodle/barraLateralActive.php", function(response, status, xhr) {
+      if (status === "error") {
+        console.error("Erro ao carregar barra lateral:", xhr.status, xhr.statusText);
+      } else {
+        console.log("Barra lateral carregada com sucesso!");
+      }
+    });
+ 
+});
+
+  </script>
+
+
+<style>
+   body:has(.barraLateralMain) .our-dashbord{
+      margin-left: 50px;
+   }
+
+   @media (max-width: 900px){
+      .barraLateralMain{
+         top: auto;
+      }
+
+      body:has(.barraLateralMain) .our-dashbord{
+         margin-left: 0;
+      }
+   }
+</style>

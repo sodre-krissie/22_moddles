@@ -1,0 +1,248 @@
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget();
+</script>
+
+
+<style>
+/*Ajustei a margem do banner do bluegrid */
+.format-bluegrid #page {
+    margin-top: 60px !important;
+}
+
+/*Adicionei o menu do questionário que fica oculto no bluegrid*/
+.path-mod-quiz.format-bluegrid .secondary-navigation,
+#page-mod-quiz-view.format-bluegrid .secondary-navigation{
+	display: block !important;
+}
+
+.path-mod-quiz.format-bluegrid #page,
+#page-mod-quiz-view.format-bluegrid #page{
+	margin-top: 110px !important;
+}
+</style>
+
+<style>
+/* AJUSTES NO REPORTBUILDER */
+
+/* Wrapper de tudo*/
+#page-admin-reportbuilder-edit #page {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    padding: 0px;
+    overflow: hidden !important;
+    margin-top: var(--mss-fix-header-height);
+}
+#page-admin-reportbuilder-edit .audiences-wrapper,
+#page-admin-reportbuilder-edit .schedules-wrapper,
+#page-admin-reportbuilder-edit #access,
+#page-admin-reportbuilder-edit .reportbuilder-wrapper{
+    margin-top: 50px;
+}
+#page-admin-reportbuilder-edit .container-fluid{
+    padding: 0px;
+}
+
+
+/* Wrapper do conteúdo */
+#page-admin-reportbuilder-edit #dynamictabs-content {
+    /* position: relative; */
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 9999; !important;
+}
+
+
+/* Side-bar da esquerda */
+#page-admin-reportbuilder-edit .reportbuilder-sidebar-menu {
+    position: static !important;
+    height: 85vh !important;
+    background-color: #FAFAFA !important;
+    padding: var(--mss-fix-pa) 0px var(--mss-fix-pa) var(--mss-fix-pa); 
+    box-shadow: 5px 0px 3px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Tabela central */
+#page-admin-reportbuilder-edit .reportbuilder-audiences-container,
+#page-admin-reportbuilder-edit .reportbuilder-report-container {
+    margin: 0 !important;
+    max-height: none !important;
+    height: 100vh !important;
+}
+
+#page-admin-reportbuilder-edit .p-2.border {
+    width: 100%;
+}
+
+/* Side-bar da direita */
+#page-admin-reportbuilder-edit .reportbuilder-sidebar-settings {
+    position: static !important;
+    margin-left: 0px !important;
+    padding: var(--mss-fix-pa); 
+    box-shadow: -5px 0px 3px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 125px) !important;
+}
+
+/* Rodapé */
+#page-admin-reportbuilder-edit footer {
+    display: none;
+}
+
+:root {
+  --mss-fix-pa: 10px;
+  --mss-fix-scrollbar-width: thin; /* thin|initial */ 
+  --mss-fix-card-font-size: 13px; /* 13|14|15 */
+  --mss-fix-card-padding: 10px; /*   10|11|12 */
+  --mss-fix-cell-padding: 8px 10px; /* 8|10|14 */
+  --mss-fix-header-padding-top: 0px; 
+  --mss-fix-header-height: 60px; 
+}
+
+
+#page-admin-reportbuilder-edit .card{
+    border: solid 1px #CCC;
+    box-shadow: none !important;
+    font-size: var(--mss-fix-card-font-size) !important;
+}
+#page-admin-reportbuilder-edit .card a.list-group-item .icon{
+    margin-right: 2px;
+}
+#page-admin-reportbuilder-edit .card a{
+    padding: var(--mss-fix-card-padding) !important;
+}
+#page-admin-reportbuilder-edit .reportbuilder-sidebar-menu-cards{
+    scrollbar-width: var(--mss-fix-scrollbar-width) !important;
+    max-height: calc(100vh - 100px) !important;
+}
+
+
+#page-admin-reportbuilder-edit{
+    max-height: calc(100vh - 70px) !important;
+}
+
+.reportbuilder-audiences-container,
+.reportbuilder-report-container{
+    scrollbar-width: var(--mss-fix-scrollbar-width) !important;
+}
+
+/* Correções no botão de busca */
+#page-admin-reportbuilder-edit #reportbuilder-sidebar-search{
+    box-shadow: none !important;
+    border: 1px solid #8f959e !important;
+    
+}
+#page-admin-reportbuilder-edit .input-group{
+    padding-right: 10px !important;
+}
+
+
+
+/*
+* Ajustes na tabela
+*/
+
+/* Ajustes no tamanho das celulas da tabela */
+#page-admin-reportbuilder-edit .generaltable th,
+#page-admin-reportbuilder-edit .generaltable td{
+    padding: var(--mss-fix-cell-padding);
+}
+
+/* Remoção do scroll do header e deixando apenas no body*/
+#page-admin-reportbuilder-edit .generaltable thead,
+#page-admin-reportbuilder-edit .generaltable tbody{
+  display: block;  
+}
+#page-admin-reportbuilder-edit .generaltable thead{
+  overflow-y: scroll !important;  
+  scrollbar-color: transparent transparent;
+}
+#page-admin-reportbuilder-edit .generaltable tbody{
+  overflow-y: scroll;
+  height: calc(100vh - 370px);
+
+}
+
+
+/*
+* Ajustes no header para ficar menor 
+*/
+
+/* Remoção do padding do breadcrumb */
+#page-admin-reportbuilder-edit .dynamictabs{
+    padding-top: var(--mss-fix-header-padding-top);
+}
+
+#page-admin-reportbuilder-edit .container-fluid{
+    min-width: 100% !important;
+}
+
+#page-admin-reportbuilder-edit .navbar.fixed-top{
+    height: var(--mss-fix-header-height);
+}
+
+#page-admin-reportbuilder-edit .dynamictabs #dynamictabs-tabs{
+    margin-bottom: 0px !important;
+    padding-top: 0px !important;
+    width: 100% !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px !important;
+}
+#page-admin-reportbuilder-edit .dynamictabs #dynamictabs-tabs:before{
+    display: none;
+}
+
+
+
+/*bugfix*/
+#page-admin-reportbuilder-edit,
+#page-admin-reportbuilder-edit .reportbuilder-report-container{
+    overflow-y: hidden !important;
+}
+
+
+/*
+* Ajustes específicos nas outras abas
+*/
+#page-admin-reportbuilder-edit #access,
+#page-admin-reportbuilder-edit #schedules,
+#page-admin-reportbuilder-edit #audiences-container{
+    padding: 20px 10%;
+}
+/* FIM DOS AJUSTES NO REPORTBUILDER */
+</style>
+<script>
+/* AJUSTES NO REPORTBUILDER */
+function ajustarLarguras() { 
+  document.querySelectorAll('#page-admin-reportbuilder-edit .generaltable thead tr th').forEach(function(el,i){
+    const w = el.getBoundingClientRect().width + 1;
+    document.querySelectorAll('#page-admin-reportbuilder-edit .generaltable tbody tr td.c'+i).forEach((ell) => { 
+      ell.style.width = w+'px'; 
+    });
+  });
+}
+
+// executa logo de cara
+ajustarLarguras();
+
+// roda novamente depois que o DOM estiver totalmente pronto
+window.addEventListener('load', ajustarLarguras);
+
+// observa redimensionamento da janela
+window.addEventListener('resize', ajustarLarguras);
+
+// dispara manualmente a cada 500ms
+const interval = setInterval(() => {
+  ajustarLarguras();
+}, 500);
+
+/* FIM DOS AJUSTES NO REPORTBUILDER */
+</script>
